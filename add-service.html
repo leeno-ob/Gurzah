@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <title>غُرزة | إضافة خدمة</title>
+  <link rel="stylesheet" href="css/style.css" >
+</head>
+<body >
+<script>
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+  } else {
+    document.body.classList.add("light-theme");
+  }
+</script>
+  <!--  Header /-->
+  <header class="site-header">
+    <nav class="nav">
+
+      <a class="logo" href="index.html">
+        <img src="images/logo2.png" alt="شعار غرزة">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" >الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">خدماتنا</a></li>
+        <li><a href="dashboard-customer.html">لوحة تحكم العميل </a></li>
+        <li><a href="dashboard-service-provider.html" class="active" >لوحة تحكم مقدمي الخدمات</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- عنوان علوي للوحة -->
+  <section class="page-header-block" aria-label="لوحة مقدمي الخدمة">
+    <div class="page-header-icon">
+      <img src="images/geer.png" alt="إعدادات">
+    </div>
+    <h1 class="page-header-title">لوحة مقدمي الخدمة</h1>
+  </section>
+
+  <main class="provider-services" style="margin-top: 12px;">
+    <h2 class="provider-services__title-right">إضافة خدمة </h2>
+
+
+    <div class="form-wrapper">
+       <form id="addServiceForm" class="form-card"> <!-- channged it-->
+
+      <h3 class="form-inner-title">أضف خدمة جديدة</h3>
+
+
+
+        <!-- اسم الخدمة -->
+
+        <div class="form-group">
+          <label for="serviceName">اسم الخدمة*</label>
+          <input type="text" id="serviceName"  required>
+        </div>
+
+        <!-- صورة الخدمة -->
+        <div class="form-group">
+          <label>اضافة صورة* </label>
+          <label class="upload-drop" for="serviceImage">
+            <img src="images/camera.png" alt="اضافه صورة" >
+          </label>
+          <input type="file" id="serviceImage" accept="image/*">
+        </div>
+
+        <!-- السعر -->
+        <div class="form-group">
+          <label for="servicePrice">السعر*</label>
+          <input type="text" id="servicePrice"  required>
+        </div>
+
+        <!-- الوصف -->
+        <div class="form-group">
+          <label for="serviceDesc">الوصف*</label>
+          <textarea id="serviceDesc" rows="4" placeholder=" وصف للخدمة  " required></textarea>
+        </div>
+
+        <!-- زر الإرسال -->
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary" >إضافة الخدمة</button>
+        </div>
+       </form>
+    </div>
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+    <!--  Footer -->
+
+
+
+  <footer class="site-footer" dir="rtl">
+    <div class="footer-wrap">
+      <div class="footer-photo">
+        <a href="index.html"><img src="images/logo2.png" alt="logo" > </a>
+      </div>
+      <div class="footer-right">
+        <h3>اتصل بنا</h3>
+        <ul class="contact">
+          <li> 📞 <p>+966504423198</p></li>
+          <li> ✉️ <a href="mailto:gurzah@gmail.com">gurzah@gmail.com</a></li>
+        </ul>
+        <ul class="social">
+          <li><a href="#"><img src="images/social-media.png" alt="TikTok"></a></li>
+          <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li>
+          <li><a href="#"><img src="images/twitter.png" alt="X"></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="pay-title">طرق الدفع</p>
+    <ul class="payments">
+      <li><img src="images/apple-pay.jpg" alt="Apple Pay"></li>
+      <li><img src="images/visa.jpg" alt="Visa"></li>
+      <li><img src="images/paypal.jpg" alt="PayPal"></li>
+      <li><img src="images/card.jpg" alt="بطاقة"></li>
+    </ul>
+
+    <div class="legal">
+      <p class="ar">© 2025 غُرزة للخياطة، جميع الحقوق محفوظة.</p>
+      <p class="en">© 2025 Gurzah Tailoring. All Rights Reserved.</p>
+    </div>
+  </footer>
+    <script src="OurScript.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إدارة الأعضاء | غُرزة</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body >
+<script>
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+  } else {
+    document.body.classList.add("light-theme");
+  }
+</script>
+ <!--  Header -->
+  <header class="site-header">
+    <nav class="nav">
+
+      <a class="logo" href="index.html">
+        <img src="images/logo2.png" alt="شعار غرزة">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">خدماتنا</a></li>
+        <li><a href="dashboard-customer.html">لوحة تحكم العميل </a></li>
+        <li><a href="dashboard-service-provider.html" class="active" >لوحة تحكم مقدمي الخدمات</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+
+
+
+
+
+  <!-- عنوان الصفحة -->
+  <section class="page-header-block">
+    <div class="page-header-icon">
+      <img src="images/geer.png" alt="إعدادات">
+    </div>
+    <h1 class="page-header-title">إدارة أعضاء الفريق</h1>
+  </section>
+
+  <!-- قائمة الأعضاء -->
+  <section class="members-section" aria-label="قائمة أعضاء الفريق">
+    <div class="members-list">
+
+      <div class="member-row">
+        <img class="member-avatar" src="images/azzam.png" alt="عضو الفريق">
+        <div class="member-name">عزام الأحمد</div>
+        <input type="checkbox" class="member-checkbox">
+      </div>
+
+      <div class="member-row">
+        <img class="member-avatar" src="images/remas.png" alt="عضو الفريق">
+        <div class="member-name">ريماس السعد</div>
+        <input type="checkbox" class="member-checkbox">
+      </div>
+
+      <div class="member-row">
+        <img class="member-avatar" src="images/khaled.png" alt="عضو الفريق">
+        <div class="member-name">خالد الخالدي</div>
+        <input type="checkbox" class="member-checkbox">
+      </div>
+
+      <div class="member-row">
+        <img class="member-avatar" src="images/lamia.png" alt="عضو الفريق">
+        <div class="member-name">لمياء العبدالله</div>
+        <input type="checkbox" class="member-checkbox">
+      </div>
+
+      <div class="member-row">
+        <img class="member-avatar" src="images/nouf.png" alt="عضو الفريق">
+        <div class="member-name">نوف عبدالرحمن</div>
+        <input type="checkbox" class="member-checkbox">
+      </div>
+
+      <div class="member-row">
+        <img class="member-avatar" src="images/saad.png" alt="عضو الفريق">
+        <div class="member-name">سعد العبدالله</div>
+        <input type="checkbox" class="member-checkbox">
+      </div>
+
+    </div>
+
+    <!-- زر الحذف -->
+    <div class="members-actions">
+      <button class="btn btn-primary" type="button">حذف الأعضاء المحددين</button>
+    </div>
+  </section>
+
+
+
+
+
+<!-- =============================== Join US =============================== -->
+<section class="join-team" id="join">
+  <h2 class="join-title">انضم لنا!</h2>
+
+  <form id="join-form" action="#" method="post" enctype="multipart/form-data" class="join-card">
+
+
+     <!--  adding image icon-->
+    <div class="avatar-field center">
+      <input type="file" id="photo" name="photo" accept="image/*" class="hidden-input">
+      <label for="photo" class="avatar-upload ">+</label>
+    </div>
+
+    <!-- first and last name fields-->
+    <div class="row two-cols">
+      <div class="col">
+        <label for="firstName">الاسم الأول: *</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+      <div class="col">
+        <label for="lastName">الاسم الأخير: *</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+    </div>
+
+    <!-- email field -->
+    <div class="row">
+      <label for="email">البريد الإلكتروني: *</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <!-- birthday (default datapicker form the browser)-->
+    <div class="row">
+      <label for="dob">تاريخ الميلاد:</label>
+      <input type="date" id="dob" name="dob" required max="2008-12-31">
+    </div>
+
+    <!-- areaa of experties -->
+       <fieldset class="row">
+      <legend>مجال الخبرة:</legend>
+
+      <label><input type="checkbox" name="expertise" value="تفصيل رجالي"> تفصيل رجالي</label>
+      <label><input type="checkbox" name="expertise" value="تفصيل نسائي"> تفصيل نسائي</label>
+      <label><input type="checkbox" name="expertise" value="تفصيل أطفال"> تفصيل أطفال</label>
+      <label><input type="checkbox" name="expertise" value="تعديلات وخياطة"> تعديلات وخياطة</label>
+      <label><input type="checkbox" name="expertise" value="تقصير/توسيع"> تقصير/توسيع</label>
+      <label><input type="checkbox" name="expertise" value="تصميم باترون"> تصميم باترون</label>
+      <label><input type="checkbox" name="expertise" value="قص وقوالب"> قص وقوالب</label>
+      <label><input type="checkbox" name="expertise" value="تطريز يدوي"> تطريز يدوي</label>
+      <label><input type="checkbox" name="expertise" value="تطريز آلي"> تطريز آلي</label>
+      <label><input type="checkbox" name="expertise" value="تشطيبات نهائية"> تشطيبات نهائية</label>
+      <label><input type="checkbox" name="expertise" value="أقمشة حساسة"> أقمشة حساسة (حرير/شيفون)</label>
+      <label><input type="checkbox" name="expertise" value="أقمشة حساسة">أخرى</label>
+
+    </fieldset>
+
+
+   <!-- super & sub skills -->
+<fieldset class="row">
+  <legend>المهارات:</legend>
+
+  <!-- skill 1 -->
+  <div class="skill-block">
+    <label for="skill-main-1">المهارة الرئيسية 1:</label>
+    <select id="skill-main-1" name="skill-main-1">
+      <option value="">اختر نوع المهارة</option>
+      <option>تفصيل (Cut & Sew)</option>
+      <option>تصميم باترون</option>
+      <option>تطريز</option>
+      <option>تشطيبات نهائية</option>
+      <option>تعديلات</option>
+    </select>
+
+    <div class="sub-skill-line">
+      <div class="col">
+        <label for="skill1-sub1">فرعية 1 (مثال: تركيب سحّاب):</label>
+        <input type="text" id="skill1-sub1" name="skill1-sub1" class="pill">
+      </div>
+
+      <div class="col">
+        <label for="skill1-sub2">فرعية 2 (مثال: قص باترون):</label>
+        <input type="text" id="skill1-sub2" name="skill1-sub2" class="pill">
+      </div>
+    </div>
+  </div>
+
+  <!-- skill 2 -->
+  <div class="skill-block">
+    <label for="skill-main-2">المهارة الرئيسية 2:</label>
+    <select id="skill-main-2" name="skill-main-2">
+      <option value="">اختر نوع المهارة</option>
+      <option>تفصيل (Cut & Sew)</option>
+      <option>تصميم باترون</option>
+      <option>تطريز</option>
+      <option>تشطيبات نهائية</option>
+      <option>تعديلات</option>
+    </select>
+
+    <div class="sub-skill-line">
+      <div class="col">
+        <label for="skill2-sub1">فرعية 1 (مثال: تقصير/توسيع):</label>
+        <input type="text" id="skill2-sub1" name="skill2-sub1" class="pill">
+      </div>
+
+      <div class="col">
+        <label for="skill2-sub2">فرعية 2 (مثال: تضييق أكمام):</label>
+        <input type="text" id="skill2-sub2" name="skill2-sub2" class="pill">
+      </div>
+    </div>
+  </div>
+</fieldset>
+
+
+<!-- Education -->
+<fieldset class="row">
+  <legend>التعليم:</legend>
+
+  <!-- E1 -->
+  <div class="edu-block">
+    <label for="period1">الفترة (مثال: 2000–2004):</label>
+    <input type="text" id="period1" name="period1">
+
+    <div class="edu-sub">
+      <div class="edu-col">
+        <label for="degree1">الدرجة:</label>
+        <select id="degree1" name="degree1">
+          <option value="">اختر الدرجة/نوع الشهادة</option>
+          <option>تعليم ذاتي</option>
+          <option>معهد</option>
+          <option>دبلوم</option>
+          <option>بكالوريوس</option>
+          <option>ماجستير</option>
+          <option>دكتوراه</option>
+        </select>
+      </div>
+
+      <div class="edu-col">
+        <label for="period1-major">التخصص:</label>
+        <input type="text" id="period1-major" name="period1-major">
+      </div>
+
+      <div class="edu-col">
+        <label for="period1-gpa">المعدل (GPA):</label>
+        <input type="text" id="period1-gpa" name="period1-gpa">
+      </div>
+    </div>
+  </div>
+
+  <!-- E2 -->
+  <div class="edu-block">
+    <label for="period2">الفترة (مثال: 2005–2007):</label>
+    <input type="text" id="period2" name="period2">
+
+    <div class="edu-sub">
+      <div class="edu-col">
+        <label for="degree2">الدرجة:</label>
+        <select id="degree2" name="degree2">
+          <option value="">اختر الدرجة/نوع الشهادة</option>
+          <option>تعليم ذاتي</option>
+          <option>معهد</option>
+          <option>دبلوم</option>
+          <option>بكالوريوس</option>
+          <option>ماجستير</option>
+          <option>دكتوراه</option>
+        </select>
+      </div>
+
+      <div class="edu-col">
+        <label for="period2-major">التخصص:</label>
+        <input type="text" id="period2-major" name="period2-major">
+      </div>
+
+      <div class="edu-col">
+        <label for="period2-gpa">المعدل (GPA):</label>
+        <input type="text" id="period2-gpa" name="period2-gpa">
+      </div>
+    </div>
+  </div>
+
+  <!-- E3 -->
+  <div class="edu-block">
+    <label for="period3">الفترة (مثال: 2008–2015):</label>
+    <input type="text" id="period3" name="period3">
+
+    <div class="edu-sub">
+      <div class="edu-col">
+        <label for="degree3">الدرجة:</label>
+        <select id="degree3" name="degree3">
+          <option value="">اختر الدرجة/نوع الشهادة</option>
+          <option>تعليم ذاتي</option>
+          <option>معهد</option>
+          <option>دبلوم</option>
+          <option>بكالوريوس</option>
+          <option>ماجستير</option>
+          <option>دكتوراه</option>
+        </select>
+      </div>
+
+      <div class="edu-col">
+        <label for="period3-major">التخصص:</label>
+        <input type="text" id="period3-major" name="period3-major">
+      </div>
+
+      <div class="edu-col">
+        <label for="period3-gpa">المعدل (GPA):</label>
+        <input type="text" id="period3-gpa" name="period3-gpa">
+      </div>
+    </div>
+  </div>
+</fieldset>
+</form>
+</section>
+
+<!-- sumbiting button-->
+
+<div class="row">
+<button type="submit" class="btn btn-primary btn-center join-submit" form="join-form">
+    إرسال
+  </button>
+</div>
+
+<!-- =============================== End of Join US =============================== -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+   <footer class="site-footer" dir="rtl">
+  <div class="footer-wrap">
+
+    <div class="footer-photo">
+      <a href="index.html">
+      <img src="images/logo2.png" alt="logo" >
+      </a>
+    </div>
+
+    <div class="footer-right">
+      <h3>اتصل بنا</h3>
+
+      <ul class="contact">
+        <li> 📞 <p>+966504423198</p>
+        </li>
+        <li> ✉️ <a href="mailto:gurzah@gmail.com">gurzah@gmail.com</a>
+        </li>
+      </ul>
+
+      <ul class="social">
+        <li><a href="#" >
+          <img src="images/social-media.png" alt="TikTok"></a></li>
+        <li><a href="#">
+          <img src="images/instagram.png" alt="Instagram"></a></li>
+        <li><a href="#">
+          <img src="images/twitter.png" alt="X"></a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <p class="pay-title">طرق الدفع</p>
+
+  <!-- أيقونات الدفع في الوسط -->
+  <ul class="payments">
+    <li><img src="images/apple-pay.jpg" alt="طريقة دفع 1"></li>
+    <li><img src="images/visa.jpg" alt="طريقة دفع 2"></li>
+    <li><img src="images/paypal.jpg" alt="طريقة دفع 3"></li>
+    <li><img src="images/card.jpg" alt="طريقة دفع 4"></li>
+  </ul>
+
+  <!-- سطر الحقوق -->
+  <div class="legal">
+    <p class="ar">© 2025 غُرزة للخياطة، جميع الحقوق محفوظة.</p>
+    <p class="en">© 2025 Gurzah Tailoring. All Rights Reserved.</p>
+  </div>
+</footer>
+  <script src="OurScript.js"></script>
+
+
+
+</body>
+</html>

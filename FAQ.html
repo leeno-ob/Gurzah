@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الأسئلة الشائعة - غُرزة</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script>
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+  } else {
+    document.body.classList.add("light-theme");
+  }
+</script>
+  <!--  Header /-->
+  <header class="site-header">
+    <nav class="nav">
+
+      <a class="logo" href="index.html">
+        <img src="images/logo2.png" alt="شعار غرزة">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">خدماتنا</a></li>
+        <li><a href="dashboard-customer.html">لوحة تحكم العميل </a></li>
+        <li><a href="dashboard-service-provider.html">لوحة تحكم مقدمي الخدمات</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- FAQ Section -->
+  <div class="faq-container">
+    <h1>الأسئلة الشائعة</h1>
+
+    <!-- سؤال 1 -->
+    <details class="faq-item">
+      <summary class="faq-header">
+        <span class="faq-question">ما هي فكرة موقع "غُرزة"؟</span>
+        <span class="icon">+</span>
+      </summary>
+      <div class="faq-content">
+        <p>يهدف "غُرزة" إلى تسهيل الحصول على خدمات الخياطة والتفصيل بطريقة سريعة ومريحة تُنفّذ وتُسلّم إلى باب المنزل، مع ضمان الجودة والدقة في كل خطوة.</p>
+      </div>
+    </details>
+
+    <!-- سؤال 2 -->
+    <details class="faq-item">
+      <summary class="faq-header">
+        <span class="faq-question">ما الخدمات التي يقدمها "غُرزة"؟</span>
+        <span class="icon">+</span>
+      </summary>
+      <div class="faq-content">
+        <p>يوفر "غُرزة" مجموعة من الخدمات تشمل: تقصير وتطويل، تضييق وتوسيع، إصلاح وترميم، التطريز والزخرفة، الإضافات مثل تركيب الأزرار والسحابات، بالإضافة إلى خيار التبرع بالملابس أو إعادة تدويرها.</p>
+      </div>
+    </details>
+
+    <!-- سؤال 3 -->
+    <details class="faq-item">
+      <summary class="faq-header">
+        <span class="faq-question">كيف أطلب خدمة خياطة أو تعديل؟</span>
+        <span class="icon">+</span>
+      </summary>
+      <div class="faq-content">
+        <p>يمكنك طلب خدمة جديدة من خلال الضغط على "طلب خدمة" في لوحة تحكم العميل، ثم اختيار نوع الخدمة وإدخال تفاصيل القطعة والملاحظات المطلوبة.</p>
+      </div>
+    </details>
+
+    <!-- سؤال 4 -->
+    <details class="faq-item">
+      <summary class="faq-header">
+        <span class="faq-question">هل يمكنني متابعة حالة الطلب؟</span>
+        <span class="icon">+</span>
+      </summary>
+      <div class="faq-content">
+        <p>نعم، يمكنك تتبّع حالة طلبك (قيد التنفيذ، قيد التوصيل، مكتمل) من خلال لوحة التحكم الخاصة بك في أي وقت.</p>
+      </div>
+    </details>
+
+    <!-- سؤال 5 -->
+    <details class="faq-item">
+      <summary class="faq-header">
+        <span class="faq-question">كيف يمكنني الانضمام كخياط أو مقدّم خدمة؟</span>
+        <span class="icon">+</span>
+      </summary>
+      <div class="faq-content">
+        <p>يمكنك التسجيل في صفحة "من نحن" عبر نموذج "انضم لنا"، وإضافة بياناتك الشخصية، ومجال الخبرة، والمهارات.</p>
+      </div>
+    </details>
+
+    <!-- سؤال 6 -->
+    <details class="faq-item">
+      <summary class="faq-header">
+        <span class="faq-question">هل يقدم الموقع خدمة التبرع بالملابس؟</span>
+        <span class="icon">+</span>
+      </summary>
+      <div class="faq-content">
+        <p>نعم، يمكنك اختيار التبرع بالملابس الزائدة أو إعادة تدويرها، لمنحها حياة جديدة بروح من العناية والعطاء.</p>
+      </div>
+    </details>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer" dir="rtl">
+    <div class="footer-wrap">
+      <div class="footer-photo">
+        <a href="index.html"><img src="images/logo2.png" alt="logo"></a>
+      </div>
+      <div class="footer-right">
+        <h3>اتصل بنا</h3>
+        <ul class="contact">
+          <li>📞 <p>+966504423198</p></li>
+          <li>✉️ <a href="mailto:gurzah@gmail.com">gurzah@gmail.com</a></li>
+        </ul>
+        <ul class="social">
+          <li><a href="#"><img src="images/social-media.png" alt="TikTok"></a></li>
+          <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li>
+          <li><a href="#"><img src="images/twitter.png" alt="X"></a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="pay-title">طرق الدفع</p>
+    <ul class="payments">
+      <li><img src="images/apple-pay.jpg" alt="طريقة دفع 1"></li>
+      <li><img src="images/visa.jpg" alt="طريقة دفع 2"></li>
+      <li><img src="images/paypal.jpg" alt="طريقة دفع 3"></li>
+      <li><img src="images/card.jpg" alt="طريقة دفع 4"></li>
+    </ul>
+    <div class="legal">
+      <p class="ar">© 2025 غُرزة للخياطة، جميع الحقوق محفوظة.</p>
+      <p class="en">© 2025 Gurzah Tailoring. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script src="OurScript.js"></script>
+
+</body>
+</html>

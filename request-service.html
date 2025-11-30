@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>غُرزة | طلب خدمة</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<script>
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+  } else {
+    document.body.classList.add("light-theme");
+  }
+</script>
+
+  <!--  Header -->
+  <header class="site-header">
+    <nav class="nav">
+
+      <a class="logo" href="index.html">
+        <img src="images/logo2.png" alt="شعار غرزة">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">خدماتنا</a></li>
+        <li><a href="dashboard-customer.html" class="active" >لوحة تحكم العميل </a></li>
+        <li><a href="dashboard-service-provider.html" >لوحة تحكم مقدمي الخدمات</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <!-- Main Content Area -->
+  <main class="page-content dashboard-page">
+    
+    <!-- Dashboard Header with Icon -->
+
+    <div class="dashboard-header">
+      <div class="dashboard-icon">
+        <img src="images/customer-dashboard.WEBP" alt="أيقونة لوحة تحكم العميل">
+      </div>
+      <h1>لوحة تحكم العميل</h1>
+    </div>
+
+    <!-- Service Request Section -->
+    <section class="dashboard-section" id="request-service">
+      <h2>طلب خدمة</h2> <!-- Section title: Service Request -->
+      
+      <!-- Service Request Form -->
+      <form action="#" method="post" class="service-form form-box">
+        
+        <!-- Location Information - Two Column Layout -->
+        <div class="form-row">
+          <!-- City Input -->
+          <div class="form-group">
+            <label for="req-city">المدينة:</label>
+            <input type="text" id="req-city" name="city" placeholder="مثال: الرياض" required>
+          </div>
+          <!-- Neighborhood Input -->
+          <div class="form-group">
+            <label for="req-neighborhood">الحي:</label>
+            <input type="text" id="req-neighborhood" name="neighborhood" placeholder="مثال: حي الياسمين" required>
+          </div>
+        </div>
+        
+        <!-- Contact Information -->
+        <div class="form-group">
+          <label for="req-phone">رقم الجوال:</label>
+          <input type="tel" id="req-phone" name="phone" placeholder="05XXXXXXXX" required>
+        </div>
+        
+       
+
+        <!-- Service Type Selection -->
+        <div class="form-group">
+          <label for="req-service-type">نوع الخدمة:</label>
+          <select id="req-service-type" name="service_type" required>
+            <option value="">اختر نوع الخدمة</option> <!-- Default option -->
+            <option value="repair">تضييق و توسيع</option> <!-- Tightening & widening -->
+            <option value="custom">التعديل و الإصلاح</option> <!-- Modification & repair -->
+            <option value="modification">التطريز و الزخرفة</option> <!-- Embroidery & decoration -->
+            <option value="length">تقصير و تطويل</option> <!-- Shortening & lengthening -->
+            <option value="extra">الإضافات</option> <!-- Add-ons -->
+            <option value="donation">التبرع</option> <!-- Donation -->
+          </select>
+        </div>
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Extra functionality اختر خياط -->
+<div class="form-group">
+  <div class="tailor-picker" dir="rtl">
+    <div class="tp-label">اختر خياط</div>
+
+    <div class="tp-actions">
+      <!-- وضع الاختيار كراديو: واحد بس يشتغل -->
+      <input class="tp-mode" type="radio" name="tp-mode" id="mode-random" checked>
+      <label for="mode-random" class="tp-btn">خياط عشوائي</label>
+
+      <input class="tp-mode" type="radio" name="tp-mode" id="mode-custom">
+      <label for="mode-custom" class="tp-btn">خياط مخصص<span class="tp-picked"></span></label>
+
+      <!-- القائمة تظهر فقط إذا "مخصص" محدد -->
+      <div class="tp-dropdown">
+        <div class="tp-dd-head">اختر خياط</div>
+        <div class="tp-body" role="list"  aria-label="قائمة الخياطين">
+          <ul class="tp-list" role="listbox">
+            <li class="tp-item"  data-key="azzam">
+              <input class="tp-radio" type="radio" name="tailor" id="t-azzam">
+              <label class="tp-name" for="t-azzam">عزام الأحمد</label>
+              <label class="tp-fav" title="تفضيل">
+                <input type="checkbox" data-key="azzam" aria-label="تفضيل عزام الاحمد">
+                <span class="icon" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="tp-item" data-key="remas">
+              <input class="tp-radio" type="radio" name="tailor" id="t-remas">
+              <label class="tp-name" for="t-remas">ريماس السعد</label>
+              <label class="tp-fav" title="تفضيل">
+                <input type="checkbox" data-key="remas" aria-label="تفضيل ريماس السعد">
+                <span class="icon" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="tp-item" data-key="khalid">
+              <input class="tp-radio" type="radio" name="tailor" id="t-khalid">
+              <label class="tp-name" for="t-khalid">خالد الخالدي</label>
+              <label class="tp-fav" title="تفضيل">
+                <input type="checkbox" data-key="khalid" aria-label="تفضيل خالد الخالدي">
+                <span class="icon" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="tp-item" data-key="lamya">
+              <input class="tp-radio" type="radio" name="tailor" id="t-lamya">
+              <label class="tp-name" for="t-lamya">لمياء العبدالله</label>
+              <label class="tp-fav" title="تفضيل">
+                <input type="checkbox" data-key="lamya" aria-label="تفضيل لمياء العبدالله">
+                <span class="icon" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="tp-item" data-key="nouf">
+              <input class="tp-radio" type="radio" name="tailor" id="t-nouf">
+              <label class="tp-name" for="t-nouf">نوف عبالرحمن</label>
+              <label class="tp-fav" title="تفضيل">
+                <input type="checkbox" data-key="nouf" aria-label="تفضيل نوف عبالرحمن">
+                <span class="icon" aria-hidden="true"></span>
+              </label>
+            </li>
+            <li class="tp-item" data-key="saad">
+              <input class="tp-radio" type="radio" name="tailor" id="t-saad">
+              <label class="tp-name" for="t-saad">سعد العبدالله</label>
+              <label class="tp-fav" title="تفضيل">
+                <input type="checkbox" data-key="saad" aria-label="تفضيل سعد العبدالله">
+                <span class="icon" aria-hidden="true"></span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- /اختر خياط -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Service Details Description -->
+        <div class="form-group">
+          <label for="req-details">تفاصيل الطلب:</label>
+          <textarea id="req-details" name="details" rows="5" placeholder="اكتب وصفاً للخدمة المطلوبة..." required></textarea>
+        </div>
+        
+        <!-- Form Submission Button -->
+        <div class="form-group form-submit">
+          <button type="submit" class="btn btn-primary">اطلب</button> <!-- Submit button -->
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Website Footer -->
+  <footer class="site-footer" dir="rtl">
+    <div class="footer-wrap">
+
+      <!-- Footer Logo -->
+      <div class="footer-photo">
+        <a href="index.html">
+          <img src="images/logo2.png" alt="شعار غُرزة">
+        </a>
+      </div>
+
+      <!-- Contact Information Section -->
+      <div class="footer-right">
+        <h3>اتصل بنا</h3> <!-- Contact Us heading -->
+
+        <ul class="contact">
+          <li><p>+966504423198</p></li> <!-- Phone number -->
+          <li><a href="mailto:gurzah@gmail.com">gurzah@gmail.com</a></li> <!-- Email address -->
+        </ul>
+
+        <!-- Social Media Links -->
+        <ul class="social">
+          <li><a href="#"><img src="images/social-media.png" alt="TikTok"></a></li> <!-- TikTok -->
+          <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li> <!-- Instagram -->
+          <li><a href="#"><img src="images/twitter.png" alt="X"></a></li> <!-- Twitter/X -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- Payment Methods Section -->
+    <p class="pay-title">طرق الدفع</p> <!-- Payment methods title -->
+    <ul class="payments">
+      <li><img src="images/apple-pay.jpg" alt="Apple Pay"></li> <!-- Apple Pay -->
+      <li><img src="images/visa.jpg" alt="Visa"></li> <!-- Visa -->
+      <li><img src="images/paypal.jpg" alt="PayPal"></li> <!-- PayPal -->
+      <li><img src="images/card.jpg" alt="Credit Card"></li> <!-- Credit Card -->
+    </ul>
+
+    <!-- Copyright Information -->
+    <div class="legal">
+      <p class="ar">2025 غُرزة للخياطة، جميع الحقوق محفوظة.</p> <!-- Arabic copyright -->
+      <p class="en">2025 Gurzah Tailoring. All Rights Reserved.</p> <!-- English copyright -->
+    </div>
+  </footer>
+  <script src="OurScript.js"></script>
+
+</body>
+</html>

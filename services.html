@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>غُرزة | خدماتنا</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script>
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+  } else {
+    document.body.classList.add("light-theme");
+  }
+</script>
+  <!--  Header /-->
+  <header class="site-header">
+    <nav class="nav">
+
+      <a class="logo" href="index.html">
+        <img src="images/logo2.png" alt="شعار غرزة">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" >الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html" class="active" >خدماتنا</a></li>
+        <li><a href="dashboard-customer.html">لوحة تحكم العميل </a></li>
+        <li><a href="dashboard-service-provider.html">لوحة تحكم مقدمي الخدمات</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="services-container">
+    <h1>خدماتنا</h1>
+    
+    <!-- Sorting Section -->
+    <div class="sorting-section">
+      <label for="sort-select">ترتيب الخدمات:</label>
+      <select id="sort-select" name="sort">
+        <optgroup label="حسب السعر">
+          <option value="price-low-high">السعر: من الأقل إلى الأعلى</option>
+          <option value="price-high-low">السعر: من الأعلى إلى الأقل</option>
+        </optgroup>
+        <optgroup label="حسب الاسم">
+          <option value="name-a-z">الاسم: من أ إلى ي</option>
+          <option value="name-z-a">الاسم: من ي إلى أ</option>
+        </optgroup>
+      </select>
+    </div>
+
+<div class="services-list" id="servicesList">
+
+  <!-- تقصير وتطويل -->
+  <div class="service-item">
+    <div class="service-content">
+      <div class="service-text">
+        <h3 class="service-name">تقصير وتطويل</h3>
+        <p class="service-description">
+          تقصير أو تطويل دقيق للملابس مع مراعاة شكل القطعة وتفاصيلها الأصلية لتبدو منسّقة ومتقنة بعد التعديل.
+        </p>
+        <div class="service-price">30 ريال</div>
+      </div>
+      <div class="service-image">
+        <img src="images/cutting.png" alt="تقصير وتطويل">
+      </div>
+    </div>
+  </div>
+
+  <!-- تضييق وتوسيع -->
+  <div class="service-item">
+    <div class="service-content">
+      <div class="service-text">
+        <h3 class="service-name">تضييق وتوسيع</h3>
+        <p class="service-description">
+          تعديلات احترافية لتوسيع أو تضييق الملابس حسب الحاجة، مع الحفاظ على تناسق الخياطة وضبط التفاصيل بدقة عالية.
+        </p>
+        <div class="service-price">35 ريال</div>
+      </div>
+      <div class="service-image">
+        <img src="images/measuring.png" alt="تضييق وتوسيع">
+      </div>
+    </div>
+  </div>
+
+  <!-- التطريز والزخرفة -->
+  <div class="service-item">
+    <div class="service-content">
+      <div class="service-text">
+        <h3 class="service-name">التطريز والزخرفة</h3>
+        <p class="service-description">
+          إضافة لمسات تطريز وزخرفة فنية باستخدام خيوط وألوان مختارة بعناية، لإبراز جمال القطعة ومنحها طابعًا فريدًا يعكس الذوق الراقي.
+        </p>
+        <div class="service-price">45 ريال</div>
+      </div>
+      <div class="service-image">
+        <img src="images/embroidery.png" alt="التطريز والزخرفة">
+      </div>
+    </div>
+  </div>
+
+  <!-- التعديل والإصلاح -->
+  <div class="service-item">
+    <div class="service-content">
+      <div class="service-text">
+        <h3 class="service-name">التعديل والإصلاح</h3>
+        <p class="service-description">
+          ترميم القطع المتضرّرة بعناية لاستعادة شكلها وجودتها الأصلية، لتبدو كما كانت في بدايتها أنيقة وجاهزة للاستخدام من جديد.
+        </p>
+        <div class="service-price">25 ريال</div>
+      </div>
+      <div class="service-image">
+        <img src="images/repair.png" alt="التعديل والإصلاح">
+      </div>
+    </div>
+  </div>
+
+  <!-- الإضافات -->
+  <div class="service-item">
+    <div class="service-content">
+      <div class="service-text">
+        <h3 class="service-name">الإضافات</h3>
+        <p class="service-description">
+          تركيب إضافات متنوعة مثل الأزرار، الدانتيل أو الزينة بخياطة دقيقة تُكمل جمالية القطعة وتمنحها لمسة شخصية مميزة.
+        </p>
+        <div class="service-price">20 ريال</div>
+      </div>
+      <div class="service-image">
+        <img src="images/buttons.png" alt="الإضافات">
+      </div>
+    </div>
+  </div>
+
+  <!-- التبرّع -->
+  <div class="service-item">
+    <div class="service-content">
+      <div class="service-text">
+        <h3 class="service-name">التبرّع</h3>
+        <p class="service-description">
+          منح الملابس حياة جديدة عبر إعادة تدويرها أو التبرّع بها، بروح من العناية والعطاء.
+        </p>
+        <div class="service-price">مجاناً</div>
+      </div>
+      <div class="service-image">
+        <img src="images/donation.png" alt="التبرّع">
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+
+
+
+  <footer class="site-footer" dir="rtl">
+    <div class="footer-wrap">
+      <div class="footer-photo">
+        <a href="index.html">
+          <img src="images/logo2.png" alt="logo">
+        </a>
+      </div>
+      <div class="footer-right">
+        <h3>اتصل بنا</h3>
+        <ul class="contact">
+          <li> 📞 <p>+966504423198</p></li>
+          <li> ✉️ <a href="mailto:gurzah@gmail.com">gurzah@gmail.com</a></li>
+        </ul>
+        <ul class="social">
+          <li><a href="#"><img src="images/social-media.png" alt="TikTok"></a></li>
+          <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li>
+          <li><a href="#"><img src="images/twitter.png" alt="X"></a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="pay-title">طرق الدفع</p>
+    <ul class="payments">
+      <li><img src="images/apple-pay.jpg" alt="طريقة دفع 1"></li>
+      <li><img src="images/visa.jpg" alt="طريقة دفع 2"></li>
+      <li><img src="images/paypal.jpg" alt="طريقة دفع 3"></li>
+      <li><img src="images/card.jpg" alt="طريقة دفع 4"></li>
+    </ul>
+    <div class="legal">
+      <p class="ar">© 2025 غُرزة للخياطة، جميع الحقوق محفوظة.</p>
+      <p class="en">© 2025 Gurzah Tailoring. All Rights Reserved.</p>
+    </div>
+  </footer>
+    <script src="OurScript.js"></script>
+
+</body>
+</html>

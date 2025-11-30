@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <title>غُرزة | إضافة خدمة</title>
+  <link rel="stylesheet" href="css/style.css" >
+</head>
+<body>
+<script>
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+  } else {
+    document.body.classList.add("light-theme");
+  }
+</script>
+
+  <!--  Header -->
+  <header class="site-header">
+    <nav class="nav">
+
+      <a class="logo" href="index.html">
+        <img src="images/logo2.png" alt="شعار غرزة">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">خدماتنا</a></li>
+        <li><a href="dashboard-customer.html" class="active" >لوحة تحكم العميل </a></li>
+        <li><a href="dashboard-service-provider.html" >لوحة تحكم مقدمي الخدمات</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+
+
+
+  <!-- Main Content Area -->
+  <main class="page-content dashboard-page">
+    
+    <!-- Dashboard Header with Icon -->
+    <div class="dashboard-header">
+      <div class="dashboard-icon">
+        <img src="images/customer-dashboard.WEBP" alt="أيقونة لوحة تحكم العميل"> <!-- Customer dashboard icon -->
+      </div>
+      <h1>لوحة تحكم العميل</h1> <!-- Main dashboard title -->
+    </div>
+
+    <!-- Service Evaluation Section -->
+    <section class="dashboard-section" id="evaluate-service">
+      <h2>تقييم خدمة</h2> <!-- Section title: Service Evaluation -->
+      
+      <!-- Evaluation Form -->
+      <form action="#" method="post" class="service-form form-box">
+
+        <!-- Service Selection Dropdown -->
+        <div class="form-group">
+          <label for="eval-service-name">اختر الخدمة لتقييمها:</label> <!-- Label for service selection -->
+          <select id="eval-service-name" name="service_name" required> <!-- Required dropdown -->
+            <option value="">اختر من طلباتك المكتملة</option> <!-- Default option -->
+            <option value="s1">تعديل فستان (2025/10/20)</option> <!-- Dress alteration option -->
+            <option value="s2">تطريز مفرش طاولة (2025/10/25)</option> <!-- Tablecloth embroidery -->
+            <option value="s3">إصلاح سريع (2025/10/18)</option> <!-- Quick repair option -->
+          </select>
+        </div>
+
+        <!-- Service Date and Price (Read-only information) -->
+        <div class="form-row"> <!-- Two-column layout -->
+          <div class="form-group">
+            <label for="eval-date">تاريخ الخدمة:</label> <!-- Service date label -->
+            <input type="text" id="eval-date" name="date" value="2025/10/20" readonly> <!-- Read-only date field -->
+          </div>
+          <div class="form-group">
+            <label for="eval-price">السعر:</label> <!-- Price label -->
+            <input type="text" id="eval-price" name="price" value="25 ر.س" readonly> <!-- Read-only price field -->
+          </div>
+        </div>
+        
+        <!-- Star Rating Section -->
+        <div class="form-group">
+          <label>تقييم الخدمة:</label> <!-- Rating label -->
+          <div class="star-rating"> <!-- Star rating container -->
+            <!-- 1 Star Rating Option -->
+            <input type="radio" id="star1" name="rating" value="1" required> <!-- Hidden radio button -->
+            <label for="star1" title="سيئة">★</label> <!-- 1 star - Bad -->
+            
+            <!-- 2 Star Rating Option -->
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2" title="غير مرضية">★</label> <!-- 2 stars - Unsatisfactory -->
+            
+            <!-- 3 Star Rating Option -->
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3" title="جيدة">★</label> <!-- 3 stars - Good -->
+            
+            <!-- 4 Star Rating Option -->
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4" title="جيدة جداً">★</label> <!-- 4 stars - Very Good -->
+            
+            <!-- 5 Star Rating Option -->
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5" title="ممتازة">★</label> <!-- 5 stars - Excellent -->
+          </div>
+        </div>
+
+        <!-- Comments/Feedback Section -->
+        <div class="form-group">
+          <label for="eval-comment">أضف تعليق على الخدمة:</label> <!-- Comment label -->
+          <textarea id="eval-comment" name="comment" rows="5" placeholder="اكتب رأيك في الخدمة..."></textarea> <!-- Comment textarea -->
+        </div>
+        
+        <!-- Form Submission Buttons -->
+        <div class="form-group form-submit">
+          <button type="submit" class="btn btn-primary">إرسال التقييم</button> <!-- Submit evaluation button -->
+        </div>
+      </form>
+    </section>
+
+  </main>
+ 
+  <!-- Website Footer -->
+  <footer class="site-footer" dir="rtl">
+    <div class="footer-wrap">
+
+      <!-- Footer Logo -->
+      <div class="footer-photo">
+        <a href="index.html">
+          <img src="images/logo2.png" alt="logo"> <!-- Footer logo image -->
+        </a>
+      </div>
+
+      <!-- Contact Information Section -->
+      <div class="footer-right">
+        <h3>اتصل بنا</h3> <!-- Contact us heading -->
+
+        <ul class="contact">
+          <li><p>+966504423198</p></li> <!-- Phone number -->
+          <li><a href="mailto:gurzah@gmail.com">gurzah@gmail.com</a></li> <!-- Email address -->
+        </ul>
+
+        <!-- Social Media Links -->
+        <ul class="social">
+          <li><a href="#"><img src="images/social-media.png" alt="TikTok"></a></li> <!-- TikTok link -->
+          <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li> <!-- Instagram link -->
+          <li><a href="#"><img src="images/twitter.png" alt="X"></a></li> <!-- Twitter/X link -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- Payment Methods Section -->
+    <p class="pay-title">طرق الدفع</p> <!-- Payment methods title -->
+    <ul class="payments">
+      <li><img src="images/apple-pay.jpg" alt="طريقة دفع 1"></li> <!-- Apple Pay -->
+      <li><img src="images/visa.jpg" alt="طريقة دفع 2"></li> <!-- Visa -->
+      <li><img src="images/paypal.jpg" alt="طريقة دفع 3"></li> <!-- PayPal -->
+      <li><img src="images/card.jpg" alt="طريقة دفع 4"></li> <!-- Credit Card -->
+    </ul>
+
+    <!-- Copyright Information -->
+    <div class="legal">
+      <p class="ar"> 2025 غُرزة للخياطة، جميع الحقوق محفوظة.</p> <!-- Arabic copyright text -->
+      <p class="en"> 2025 Gurzah Tailoring. All Rights Reserved.</p> <!-- English copyright text -->
+    </div>
+  </footer>
+    <script src="OurScript.js"></script>
+
+</body>
+</html>

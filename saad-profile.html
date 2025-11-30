@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>غُرزة | معلومات الخياط</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<script>
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+  } else {
+    document.body.classList.add("light-theme");
+  }
+</script>
+
+  <!--  Header /-->
+  <header class="site-header">
+    <nav class="nav">
+
+      <a class="logo" href="index.html">
+        <img src="images/logo2.png" alt="شعار غرزة">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" >الرئيسية</a></li>
+        <li><a href="about.html" class="active" >من نحن</a></li>
+        <li><a href="services.html">خدماتنا</a></li>
+        <li><a href="dashboard-customer.html">لوحة تحكم العميل </a></li>
+        <li><a href="dashboard-service-provider.html">لوحة تحكم مقدمي الخدمات</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <section class="tailor-intro">
+     <h2>معلومات الخياط</h2>
+     <hr>
+    </section>
+<!-- Extra Functionality  زر القلب (تفضيل الخياط) -->
+               <div class="heart-pos">
+          <label class="tailor-fav" title="تفضيل">
+             <input type="checkbox" id="fav-saad"  data-key="saad" aria-label="تفضيل سعد العبدالله">
+             <span class="icon"></span>
+          </label>
+            </div>
+
+      <!-- End of Extra Functionality  زر القلب (تفضيل الخياط) --> 
+    <div class="table-wrap">
+      <table class="profile-table">
+        <caption>الملف التعريفي للخياط سعد العبدالله</caption>
+
+        <thead>
+          <tr>
+            <th>الاسم</th>
+            <th>الصورة</th>
+            <th>البريد الإلكتروني</th>
+            <th>تاريخ الميلاد</th>
+            <th>مجال الخبرة</th>
+            <th>المهارات</th>
+            <th>التعليم</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="span-cell" rowspan="3"><strong>سعد العبدالله</strong></td>
+
+             
+            <td class="span-cell" rowspan="3">
+              <img src="images/saad.png" alt="صورة سعد" width="90" height="90">
+            </td>
+
+            <td class="span-cell" rowspan="3">
+              <a href="mailto:saad@example.com">saad@example.com</a>
+            </td>
+
+            <td class="span-cell" rowspan="3">1994/02/26</td>
+
+            <td>تفصيل وخياطة الثياب الرجالية الرسمية والكاجوال</td>
+
+            <td class="skills-cell" rowspan="3">
+              <ul>
+                <li><strong>مهارة رئيسية ١</strong>
+                  <ul>
+                    <li>تصميم الباترون الرجالي من الصفر</li>
+                    <li>قص وخياطة الثياب بتقنيات حديثة</li>
+                  </ul>
+                </li>
+                <li><strong>مهارة رئيسية ٢</strong>
+                  <ul>
+                    <li>تعديلات المقاسات حسب الطلب</li>
+                    <li>تشطيب يدوي نهائي بدرجة عالية من الدقة</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+
+            <td class="edu-cell" rowspan="3">
+              <ul>
+                <li>2013–2017
+                  <ul>
+                    <li>بكالوريوس تقنية خياطة وتصميم</li>
+                    <li>GPA: 4.25/5</li>
+                  </ul>
+                </li>
+                <li>2019–2020
+                  <ul>
+                    <li>دورة متقدمة في خياطة الثياب الخليجية الحديثة</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td>تصميم وتفصيل البشوت والمناسبات الرسمية</td>
+          </tr>
+
+          <tr>
+            <td>تنسيق الأقمشة والألوان حسب ذوق العميل</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <p class="tailor-note">
+      <em>سعد يقول:</em> أعتز بأن أقدم خياطة تجمع بين الأصالة والجودة في كل تصميم.
+    </p>
+
+  </main>
+
+  <footer class="site-footer" dir="rtl">
+    <div class="footer-wrap">
+      <div class="footer-photo"><a href="index.html"><img src="images/logo2.png" alt="logo"></a></div>
+      <div class="footer-right">
+        <h3>اتصل بنا</h3>
+        <ul class="contact">
+          <li>📞 <p>+966504423198</p></li>
+          <li>✉️ <a href="mailto:gurzah@gmail.com">gurzah@gmail.com</a></li>
+        </ul>
+        <ul class="social">
+          <li><a href="#"><img src="images/social-media.png" alt="TikTok"></a></li>
+          <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li>
+          <li><a href="#"><img src="images/twitter.png" alt="X"></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="pay-title">طرق الدفع</p>
+    <ul class="payments">
+      <li><img src="images/apple-pay.jpg" alt="Apple Pay"></li>
+      <li><img src="images/visa.jpg" alt="Visa"></li>
+      <li><img src="images/paypal.jpg" alt="PayPal"></li>
+      <li><img src="images/card.jpg" alt="Card"></li>
+    </ul>
+
+    <div class="legal">
+      <p class="ar">© 2025 غُرزة للخياطة، جميع الحقوق محفوظة.</p>
+      <p class="en">© 2025 Gurzah Tailoring. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script src="OurScript.js"></script>
+
+</body>
+</html>

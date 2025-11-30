@@ -1,0 +1,3454 @@
+
+/* ======================================== THE NAV BAR ======================================== */
+/*  main colors */
+
+*{box-sizing:border-box;
+  font-family:"Cairo",system-ui}
+
+body{ margin: 0;
+  color: #2b2b2b;             
+  line-height: 1.6;
+  padding-top: 0; 
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+header.site-header{
+ background-color: rgba(248, 228, 234, 0.876); 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 6px 20px;
+  border-bottom: 1px solid rgba(224, 213, 208, 0.8);
+}
+
+/*  Flex container  */
+.nav {
+  display: flex;    
+  justify-content: flex-start;    
+            
+  align-items: center; 
+    gap: 30px;                    
+  padding-right: 20px;   
+}
+
+/*  Logo  */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 70px;
+  height: auto;
+  margin-left: 10px; 
+  border-radius: 50%;
+}
+
+/* Nav Links  */
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: space-between; 
+  margin: 0;
+  flex-wrap: nowrap; 
+  padding: 0;
+  gap: 90px;                    
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #444;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover { 
+  background-color: #c77b92 ; 
+  color : white ; 
+} 
+
+.nav-links .active {
+  background-color: #97465c;
+  color: rgb(255, 255, 255);
+}
+
+/* ======================================== END OF THE NAV BAR ======================================== */
+
+/* ======================================== THE PHOTOS SLIDES ======================================== */
+
+/* الخلفيات */
+.promo-slider{
+  position: relative;
+  max-width: 1200px;
+  margin: 16px auto 24px;
+  border: 1px solid #e0d5d0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  direction: rtl;
+}
+
+/* إطار العرض */
+.promo-frame{
+  position: relative;
+  width: 100%;
+  height: 480px;             
+  overflow: hidden;
+  border-radius: 12px;  
+}
+
+.slide{
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%; 
+  display: none;              
+}
+
+/* الخلفيات */
+.slide.s1{ background-image: url("../images/promo1.jpg"); }
+.slide.s2{ background-image: url("../images/promo2.jpg"); }
+.slide.s3{ background-image: url("../images/promo3.jpg"); }
+
+#h1:checked ~ .promo-frame .s1{ display: block; }
+
+#h2:checked ~ .promo-frame .s2{ display: block; }
+
+#h3:checked ~ .promo-frame .s3{ display: block; }
+
+/* الكلام فوق الصورة */
+.overlay {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: #fff; 
+  background: rgba(0, 0, 0, 0.25); 
+}
+
+.overlay h2{
+  margin: 0 0 8px;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.overlay p{
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #eae3e3;
+}
+
+/* الأسهم */
+.arrows{
+  position: absolute;
+  top: 50%;
+  right: 0; left: 0;
+  height: 0;                
+  display: none;             
+  padding: 0 12px;
+}
+
+/* زر السهم */
+.arrow{
+  position: absolute;
+  top: -20px;                
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(0,0,0,.35);
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.arrow.prev{ right: 12px; }   
+.arrow.next{ left: 12px; }
+
+#h1:checked ~ .a1{ display: block; }
+#h2:checked ~ .a2{ display: block; }
+#h3:checked ~ .a3{ display: block; }
+
+/*  الشرطات */
+.lines{
+ position: absolute;
+  bottom: 12px;
+  right: 0;
+  left: 0;
+  text-align: center;
+  margin: 0;
+  padding: 0;        
+
+}
+
+.line{
+  display: inline-block;
+  width: 22px;
+  height: 3px;
+  margin: 0 4px;
+  background: #d1c5c8;
+  cursor: pointer;
+}
+/*  أزرار الراديو */
+.promo-slider input[type="radio"] {
+  display: none;
+}
+/* تمييز الشرطة النشطة */
+#h1:checked ~ .lines .line1{ background: #5c2030; }
+#h2:checked ~ .lines .line2{ background: #5c2030; }
+#h3:checked ~ .lines .line3{ background: #5c2030; }
+
+/* ======================================== END OF PHOTOS SLIDES ======================================== */
+
+/* ======================================== VISION AND MISSON ======================================== */
+
+
+.vision {
+  text-align: center;
+  padding: 40px;
+  background-color: #ffffff;
+  
+}
+
+.vision h2 {
+  color: #5c2030;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* ترتيب المربعات */
+.vision-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* المربع */
+.box {
+  width: 280px !important;
+  background-color: #f7f2f4;
+  border: 1px solid #e0d5d0;
+  padding: 20px;
+  text-align: center;
+    border-radius: 6px;
+
+}
+
+.icon {
+  width: 50px !important ;     
+  height: auto !important;
+  margin-bottom: 10px;
+  border-radius: 50%;  
+}
+
+/* العنوان */
+.box h3 {
+  font-size: 18px;
+  color: #5c2030;
+  margin-bottom: 10px;
+}
+
+/* text */
+.box p {
+  font-size: 15px;
+  color: #4b2b2d;
+  line-height: 1.6;
+}
+
+.box:hover {
+  background-color: #f0e3e7;
+}
+
+/* ======================================== END OF VISION AND MISSON ======================================== */
+
+
+/* ======================================== SERVICES ======================================== */
+
+
+.services {
+  padding: 0px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.services h2 {
+  font-size: 28px;
+  color: #5c2030;
+  margin-bottom: 70px;
+  font-weight: 700;
+}
+
+/* سحب عشان نشوف كل الخدمات */
+.services-scroll {
+  display: flex;
+ justify-content: center;   
+  align-items: flex-start; 
+  gap: 40px;
+  overflow: auto;
+  max-width: 1100px; 
+  margin: 0 auto;
+  padding-bottom: 15px;
+}
+
+
+
+/* كل بطاقة خدمة */
+.service {
+  flex: 0 0 auto;
+  min-width: 260px;
+  text-align: center;
+  padding: 10px;
+}
+
+/* العنوان */
+.service h3 {
+  color: #5c2030;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.service-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;   
+  object-fit: cover;    
+  border: 1px solid #e0d5d0;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+/* الوصف */
+.service p {
+  font-size: 14px;
+  color: #4b2b2d;
+  line-height: 1.7;
+  margin: 0 auto;
+  max-width: 220px;
+  font-weight: 470;
+}
+
+/* ========================================  END OF SERVICES ======================================== */
+
+
+/* ======================================== EXTRA SECTION (FAQ) ======================================== */
+
+.FAQs{
+  max-width: 900px;
+  margin: 28px auto 30px;
+  text-align: center;
+  color: #4b2224;
+}
+.FAQs p{
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.9;
+}
+.FAQs-link {
+  color: #4b2224;              
+  font-weight: bold;            
+  text-decoration: none;       
+  border-bottom: 2px solid #97465c; 
+  padding-bottom: 2px;
+  transition: all 0.3s ease;   
+}
+
+.FAQs-link:hover {
+  color: #97465c;               
+  border-color: #c77b92;        
+  opacity: 0.9;
+}
+
+.FAQ::after{ margin: 16px auto 0; }
+
+/* ======================================== END OF EXTRA SECTION (FAQ) ======================================== */
+
+/* ======================================== RATINGS ======================================== */
+
+.reviews {
+  text-align: center;
+  margin: 80px auto;
+  max-width: 1200px;
+  position: relative;
+}
+
+.reviews h2 {
+  font-size: 26px;
+  color: #4b2224;
+  margin-bottom: 30px;
+}
+
+/* إخفاء الراديو */
+.reviews input { display: none; }
+
+/* الشريحة */
+.reviews-slider {
+  display: none;
+  justify-content: center;
+  gap: 20px;
+  transition: all 0.5s ease;
+}
+
+#r1:checked ~ .s1 { display: flex; }
+#r2:checked ~ .s2 { display: flex; }
+
+/* كل تقييم */
+.review {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  width: 320px;
+  min-height: 340px;
+  padding: 18px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: all .3s ease;
+}
+
+.review:hover {
+  background: #fff6f8;
+  border-color: #d16c58;
+  transform: translateY(-5px);
+}
+
+/* الرأس */
+.review-head {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  direction: rtl; 
+}
+
+.avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  object-fit: cover;
+}
+
+.avatar--text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1e6ea;
+  color: #4b2224;
+  font-weight: bold;
+  font-size: 18px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+/* الاسم والنجوم */
+.meta h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #4b2224;
+  font-weight: bold;
+}
+
+.stars {
+  color: #fa9a00;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/* النص */
+.review-text {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #333;
+  margin: 10px auto;
+   width: 95%;          
+  align-self: center;
+  font-weight: 500;
+
+}
+
+/* الصورة */
+.review-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* كروت بدون صورة */
+.review.no-photo .review-text {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+}
+
+/* الأسهم */
+.rev-arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.rev-btn {
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #4b2224;
+  font-size: 28px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: all 0.3s;
+}
+
+.rev-btn:hover {
+  background: #d16c58;
+  color: #fff;
+  border-color: #d16c58;
+}
+
+/* قلب الأسهم */
+.rev-prev { left: 20px; }
+.rev-next { right: 20px; }
+
+
+/* ======================================== END OF RATINGS ======================================== */
+
+
+/* ======================================== JANA's PART OF CSS ======================================== */
+
+/* =============================== About US =============================== */
+
+.about-intro{
+  margin:10px auto 40px;          
+  padding:10px 16px 30px;         
+  border-bottom:1px solid #e8dfe4; 
+}
+.about-intro h2{
+  color:#5c2030;
+  font-size:28px;
+  font-weight:700;
+  text-align:right;
+  margin-bottom:45px;            
+}
+
+.about-intro hr {
+  border: none;               
+  border-top: 2px solid #eedee8;
+  width: 95%;                   
+  margin: 20px auto 45px;      
+}
+
+/* H.scroll */
+.members-scroller{
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 30px;
+
+  max-width: 1100px; /* عرض مناسب يشيل 4 فقط */
+  margin: 0 auto;  /* يوسّطهم */
+
+  padding: 0 10px 45px;
+  scroll-behavior: smooth;
+
+}
+
+
+.member-card{
+  flex: 0 0 170px;     
+  width: 10px;
+  margin-left: 30px;    
+  text-align: center;
+}
+
+
+.member-card img{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid #e0d5d0;
+  background: #fff;
+  display: block;
+  margin: 0 auto 8px;
+}
+
+
+.member-name{
+  display: inline-block;      
+  color: #4b2224;
+  font-weight: bold;
+  margin-top: 6px;
+  text-decoration: none;
+  
+  padding-bottom: 2px;
+}
+
+/* links hover - visited -active */
+.member-name:link {
+  color: #5c2030;            
+  text-decoration: none;
+}
+
+.member-name:visited {
+  color: #5c2030;            
+}
+
+.member-name:hover {
+  color: #97465c;            
+  text-decoration: underline; 
+  opacity: 0.9;
+}
+
+.member-name:active {
+  color: #eedee8;            
+}
+/* =============================== End of About Us =============================== */
+
+
+
+/* =============================== Join Us Form =============================== */
+
+.join-team{
+    padding: 30px 16px !important;
+}
+
+
+.join-title {
+  max-width: 400px;
+  background: #97465c;
+  color: #fff;
+  display: block;
+  margin: 0 auto 24px;
+  text-align: center;
+  padding: 10px 0;
+  border: 0;
+  border-radius: 12px; 
+  font-weight: bold;
+  font-size: 24px;
+
+   
+}
+
+.join-card {
+  max-width: 750px;
+  margin: 0 auto;
+  border: 1px solid #e0d5d0;
+  background: #fff;
+  padding: 24px;
+  border-radius: 6px; 
+}
+
+/* adding image icon(+) */
+
+.hidden-input{ 
+    display:none; }
+
+
+.avatar-field{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:24px;
+}
+
+.avatar-upload{
+      width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: #fefcfd;            
+    border: 2px solid #e2cdd5;    
+    color: #5c2030;                
+    font-size: 75px;              
+    display: flex;                  
+    justify-content: center;       
+    align-items: center;
+    cursor: pointer;
+    transition: 0.25s ease;
+    text-align: center;
+}
+.avatar-upload:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    background: #fff7fa;
+}
+
+/* rows for balnks */
+.row {
+  margin-bottom: 20px;
+}
+.two-cols{
+    display:flex;
+    gap:20px;
+}
+
+.two-cols .col {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.two-cols .col:last-child {
+  margin-left: 0;
+}
+
+.join-card label {
+  display: block;
+  margin: 6px 0 6px;
+  color: #333;
+}
+
+.join-card input[type="text"],
+.join-card input[type="email"],
+.join-card input[type="date"],
+.join-card select .join-card textarea {
+  width: 100%;
+
+
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+      font-size: 15px;
+
+  box-sizing: border-box;
+
+  font-family: 'Cairo', sans-serif;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+/* area of experaties(checkboxes) */
+
+
+fieldset.row {
+  border: 1px solid #e0d5d0;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+fieldset.row legend {
+  padding: 0 6px;
+  color: #4b2224;
+  font-weight: bold;
+}
+
+fieldset.row label {
+  display: inline-block;
+  margin: 6px 12px 0 0;
+}
+
+/* ===== Skills ===== */
+.skill-block {
+  border: 1px dashed #d1bcbd;
+  padding: 12px;
+  border-radius: 6px;
+  background: #ffffff ;
+  margin-top: 10px;
+}
+
+.sub-skill-line {
+  display: flex;
+  margin-top: 8px;
+}
+
+.sub-skill-line .col {
+  flex: 1;
+  margin-left: 12px;
+}
+
+.sub-skill-line .col:first-child {
+  margin-left: 0;
+}
+
+.sub-skill-line .col input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* ===== Education ===== */
+.edu-block {
+  border: 1px dashed #d1bcbd;
+  padding: 12px;
+  border-radius: 6px;
+  background: #ffffff ;
+  margin-top: 10px;
+}
+
+.edu-sub {
+  display: flex;
+  margin-top: 8px;
+}
+
+.edu-col {
+  flex: 1;
+  margin-left: 12px;
+}
+
+.edu-col:first-child {
+  margin-left: 0;
+}
+
+.edu-col input,
+.edu-col select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/*changing foucs default color */
+
+.join-card input[type="text"]:focus,
+.join-card input[type="email"]:focus,
+.join-card input[type="date"]:focus,
+.join-card select:focus {
+  outline: 1px solid #97465c;   
+  outline-offset: 0px;          
+  border-color: #97465c;        
+  background: #fff;             
+}
+
+.join-card input:focus,
+.join-card select:focus,
+.join-card textarea:focus {
+    outline: none;
+    border-color: #97465c !important;
+    box-shadow: 0 0 0 2px rgba(151, 70, 92, 0.15);
+}
+
+.join-card .row {
+    margin-bottom: 22px;
+}
+
+
+.join-card label {
+    font-weight: 600;
+    color: #4b2224;
+    margin-bottom: 6px;
+}
+/*submiting button */
+
+
+.btn-center{ display:block; margin: 0 auto 80px }
+
+.form-submit 
+.btn-center{ margin-inline: auto; }
+
+
+/* =============================== End of Join Us =============================== */
+ 
+
+/* tailors profile page(s) (CSS) */
+
+/* ===== Tailor Profile Table ===== */
+
+.tailor-intro{
+  margin:10px auto 40px;          
+  padding:10px 16px 30px;         
+  border-bottom:1px solid #e8dfe4; 
+}
+.tailor-intro h2{
+  color:#5c2030;
+  font-size:28px;
+  font-weight:700;
+  text-align:right;
+  margin-bottom:45px;            
+}
+
+.tailor-intro hr {
+  border: none;               
+  border-top: 2px solid #eedee8;
+  width: 95%;                   
+  margin: 0px auto 0px;      
+}
+.table-wrap{
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 0 12px;
+  overflow: auto;           
+}
+
+.profile-table{
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #e0d5d0;
+  font-size: 15px;
+}
+
+.profile-table caption{
+  text-align: right;
+  padding: 10px 8px;
+  color: #7a5a66;
+  font-size: 14px;
+}
+
+.profile-table thead th{
+  background: #faf2f5;
+  color: #4b2224;
+  border: 1px solid #e0d5d0;
+  padding: 10px 8px;
+}
+
+.profile-table td{
+  border: 1px solid #e0d5d0;
+  padding: 12px 10px;
+}
+
+/* orange background for spanning data */
+.profile-table .span-cell{ background: #fff6f1; }
+
+/* orange background ul */
+.profile-table .skills-cell{
+  background: #e9f3fb;
+}
+.profile-table .skills-cell ul{
+  margin: 0 0 0 1rem;
+}
+.profile-table .skills-cell ul ul{
+  margin-top: 6px;
+}
+
+/* green background for ul */
+.profile-table .edu-cell{
+  background: #e9f7ec;
+}
+.profile-table .edu-cell dl{ margin: 0; }
+.profile-table .edu-cell dt{
+  font-weight: 700; color: #3b5d40; margin-top: 6px;
+}
+.profile-table .edu-cell dd{
+  margin: 0 0 6px 0;
+}
+
+/* tailors image */
+.photo-cell img{
+  width: 90px; height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #e0d5d0;
+  display: block;
+  margin: 0 auto;
+}
+
+/* tailor's saying */
+.tailor-note{
+  max-width: 1200px;
+  margin: 12px auto 50px;
+  color: #4b2224;
+  background: #fffdfc;
+  border: 1px dashed #e0d5d0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   TAILOR PROFILE PAGE — DARK MODE
+   ========================================= */
+
+body.dark-theme main {
+  background: #212121 !important;
+  color: #f0f0f0 !important;
+}
+
+
+body.dark-theme .tailor-intro {
+  background: transparent !important;
+  border-bottom-color: #444 !important;
+}
+
+body.dark-theme .tailor-intro h2 {
+  color: #ffffff !important;
+}
+
+body.dark-theme .tailor-intro hr {
+  border-top-color: #555 !important;
+}
+
+body.dark-theme .table-wrap {
+  background: transparent !important;
+}
+
+body.dark-theme .profile-table {
+  background: #2b2b2b !important;
+  color: #eaeaea !important;
+  border-color: #555 !important;
+}
+
+body.dark-theme .profile-table caption {
+  color: #e6bfd0 !important;
+}
+
+body.dark-theme .profile-table th {
+  background: #3a3a3a !important;
+  color: #ffffff !important;
+  border-color: #555 !important;
+}
+
+body.dark-theme .profile-table td {
+  background: #2f2f2f !important;
+  color: #f0f0f0 !important;
+  border-color: #555 !important;
+}
+
+body.dark-theme .profile-table .span-cell {
+  background: #363636 !important;
+}
+
+body.dark-theme .profile-table .skills-cell {
+  background: #29333a !important;
+}
+
+body.dark-theme .profile-table .edu-cell {
+  background: #28302c !important;
+}
+
+body.dark-theme .profile-table a {
+  color: #ffdcec !important;
+}
+body.dark-theme .profile-table a:hover {
+  color: #ff8fb5 !important;
+}
+
+body.dark-theme .profile-table img {
+  border-color: #777 !important;
+}
+
+body.dark-theme .tailor-note {
+  background: #2f2f2f !important;
+  border-color: #666 !important;
+  color: #ffffff !important;
+}
+
+body.dark-theme .tailor-note em {
+  color: #f4c6d4 !important;
+}
+
+body.dark-theme .tailor-fav .icon {
+  color: #ff91b6 !important;
+}
+
+/* ======================================== END OF JANA's PART OF CSS ======================================== */
+
+
+
+/* ======================================== SANA's PART OF CSS ======================================== */
+
+/* Main dashboard container - centers content with max width */
+.dashboard-page {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* Header section at top of dashboard */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Placeholder for when no icon is available */
+.dashboard-icon-placeholder {
+  width: 80px;
+  height: 80px;
+  border: 2px dashed #c77b92;
+  background-color: #f7f2f4;
+  border-radius: 10px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: #c77b92;
+}
+.dashboard-icon-placeholder::before {
+  content: "?"; /* Shows question mark inside placeholder */
+}
+
+/* Main dashboard title */
+.dashboard-header h1 {
+  color: #5c2030;
+  font-size: 32px;
+  margin: 0;
+}
+
+/* Sections within dashboard (like Previous Requests) */
+.dashboard-section {
+  margin-bottom: 30px;
+}
+
+/* Section headings */
+.dashboard-section h2 {
+  text-align: center;
+  color: #5c2030;
+  font-size: 26px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #f0e3e7;
+  padding-bottom: 10px;
+}
+
+/* Horizontal line between sections */
+.section-divider {
+  border: 0;
+  height: 1px;
+  background-color: #e8d5de;
+  margin: 50px auto;
+}
+
+/* Card showing each service request */
+.request-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allows wrapping on small screens */
+  gap: 20px;
+  background-color: #fff;
+  border: 1px solid #e0d5d0;
+  border-right: 5px solid #97465c; 
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s;
+}
+.request-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Shadow on hover */
+}
+
+/* Text details inside request cards */
+.request-details p {
+  margin: 6px 0;
+  color: #4b2b2d;
+  font-size: 16px;
+  min-width: 300px;
+}
+.request-details p strong {
+  color: #5c2030;
+  min-width: 50%;
+  display: inline-block;
+}
+
+/* Status section on right side of request cards */
+.request-status {
+  border-right: 3px solid #e0d5d0; /* Separator line */
+  padding-right: 30px;
+  padding-top: 49px; 
+  margin: 20px; 
+  min-height: 120px;
+  text-align: right; 
+  font-weight: bold; 
+  align-items: center; 
+}
+
+.request-status strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 15px;
+  color: #444;
+}
+
+/* Star rating system for reviews */
+.star-rating {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+    direction: ltr; /* Force left-to-right for stars */
+}
+
+.star-rating input {
+    display: none; /* Hide radio buttons */
+}
+
+.star-rating label {
+    font-size: 2.5rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Hover effect - color stars when hovering */
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #ffc107 !important;
+}
+
+/* Color stars based on selection */
+#star1:checked ~ label:nth-of-type(-n+1) { color: #ffc107; }
+#star2:checked ~ label:nth-of-type(-n+2) { color: #ffc107; }
+#star3:checked ~ label:nth-of-type(-n+3) { color: #ffc107; }
+#star4:checked ~ label:nth-of-type(-n+4) { color: #ffc107; }
+#star5:checked ~ label:nth-of-type(-n+5) { color: #ffc107; }
+
+/* Default star color */
+.star-rating label {
+    color: #ddd;
+}
+
+/* Form styling */
+.service-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-submit {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    margin-top: 2rem;
+}
+
+/* Button styles */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #97465c; /* Main brand color */
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #7a3750;
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Gray color */
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #545b62;
+    transform: translateY(-2px);
+}
+
+/* White container for forms */
+.form-box {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid #e0d5d0;
+}
+
+/* Row layout for forms with multiple fields */
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+/* Form labels and inputs */
+.form-group label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: bold;
+    color: #5c2030;
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Cairo', sans-serif;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #97465c; /* Brand color on focus */
+    box-shadow: 0 0 0 2px rgba(151, 70, 92, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Action buttons at bottom of dashboard */
+.dashboard-actions {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.dashboard-actions .btn {
+    min-width: 150px;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.dashboard-actions .btn-primary {
+    background-color: #97465c;
+    color: white;
+    border: none;
+}
+
+.dashboard-actions .btn-primary:hover {
+    background-color: #7a3750;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(151, 70, 92, 0.3);
+}
+
+/* Actual icon styling (replaces placeholder) */
+.dashboard-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* ======================================== END OF SANA's PART OF CSS ======================================== */
+
+/* ======================================== LEEN's PART OF CSS ======================================== */
+
+.page-header-block{
+  max-width: 1100px;
+  margin: 24px auto 12px;  
+  padding: 0;
+  text-align: center;
+}
+.page-header-icon img{
+  width: 64px; height: 64px;
+  display: block;
+  margin: 0 auto 10px;
+}
+.page-header-title{
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #5c2030;
+}
+
+/*  قسم الخدمات */
+.provider-services{
+  max-width: 1200px;
+  margin: 0 auto 40px;      /* مسافة  قبل الفوتر */
+  padding: 0 24px;        
+}
+
+/* عنوان خدماتي  عاليمين */
+.provider-services__title-right{
+  margin: 10px 0 16px;
+  text-align: right;
+  color: #5c2030;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.services-scroll-box{
+  background:#fff; border:1px solid #eed9e2; border-radius:14px;
+  padding:24px;
+  max-height: 560px;    
+  overflow-y: auto;     
+}
+
+/*  بطاقات الخدمات: عنصرين في الصف */
+.services-grid-square{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+/* البطاقة المربعة */
+.service-card-square{
+  background: #fff;
+  border: 1px solid #ead7df;
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.service-card-square:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.06);
+}
+
+/* صورة الخدمة دائرية    */
+.service-square-img{
+  width: 120px;
+  height: 120px;
+  display: block;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #e0d5d0;
+}
+
+/*  البطاقة */
+.service-card-square h3{
+  margin: 6px 0 6px;
+  font-size: 20px;
+  color: #4b2224;
+  font-weight: 700;
+}
+.service-price{
+  margin: 0 0 8px;
+  color: #7a5a66;
+  font-weight: 600;
+}
+.service-card-square p{
+  margin: 0;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* أزرار أسفل القسم (بالنص) */
+.provider-actions-center{
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin: 20px auto 0;
+}
+
+
+/* ——— العنوان حق (لوحة مقدمي الخدمة) ——— */
+.page-header-block{max-width:1100px;margin:24px auto 16px;text-align:center}
+.page-header-icon{width:72px;height:72px;margin:0 auto 8px;display:flex;align-items:center;justify-content:center}
+.page-header-icon img{width:72px;height:72px;opacity:.9}
+.page-header-title{margin:0;color:#4b2224;font-size:28px;font-weight:700}
+
+/* عنوان فرعي يمين */
+.provider-services__title-right{
+  max-width:1100px;margin:8px auto 16px;padding:0 8px;
+  color:#4b2224;font-size:22px;font-weight:700;text-align:right
+}
+
+/* نموذج   */
+
+.form-wrapper{max-width:760px;margin:0 auto 40px;padding:0 12px}
+.form-card{
+  background:#fff;border:1px solid #ead7df;border-radius:14px;
+  padding:20px 18px;box-shadow:0 6px 18px rgba(0,0,0,.05)
+}
+.form-group{margin-bottom:14px}
+.form-group label{display:block;margin-bottom:6px;color:#4b2224;font-weight:600}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="password"],
+.form-group select,
+.form-group textarea{
+  width:100%;padding:10px 12px;border:1px solid #e0d5d0;border-radius:10px;
+  font-size:15px;outline:none
+}
+.form-group textarea{resize:vertical}
+.form-group input[type="file"] {display:none}
+
+
+
+/*  رفع الصورة (مربع مع الكاميرا) */
+.upload-drop{
+ text-align: center;
+
+  width:160px;height:160px;margin:8px 0 0;display:flex;flex-direction:column;
+
+  align-items:center;justify-content:center;gap:10px;cursor:pointer;
+
+  border:1px dashed #d8c5cc;border-radius:12px;background-color:#ffffff;user-select:none
+}
+.upload-drop img{width:40px;height:40px;opacity:.9}
+.upload-drop span{font-size:14px;color:#7a5a66}
+
+/*  خانة الصورة   */
+.form-group .upload-drop {
+  margin: 10px auto;         
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* زر أساسي */
+.button-primary{
+  display:inline-block;background:#97465c;color:#fff;text-decoration:none;
+  border:1px solid #97465c;border-radius:10px;padding:10px 18px;font-weight:700
+}
+.button-primary:hover{background:#7f3a4e;border-color:#7f3a4e}
+.form-actions{margin-top:8px;text-align:center}
+
+
+.form-inner-title {
+  text-align: center;
+  color: var(--main-color, #4b1e25);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* ============================================= */
+
+/*  قائمة الأعضاء  */
+.members-section {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  padding: 20px;
+}
+
+.members-list {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #e0d5d0;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+/*  سكرول  */
+.members-list::-webkit-scrollbar {
+  width: 8px;
+}
+.members-list::-webkit-scrollbar-thumb {
+  background-color: #d8b5c4;
+  border-radius: 6px;
+}
+.members-list::-webkit-scrollbar-track {
+  background-color: #f7eef2;
+}
+
+.member-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0dce3;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.member-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #e0c7cf;
+}
+
+.member-name {
+  flex: 1;
+  text-align: right;
+  padding-right: 10px;
+  font-weight: 600;
+  color: #5c2030;
+}
+
+.member-checkbox {
+  width: 18px;
+  height: 18px;
+}
+
+/* زر الحذف */
+.members-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
+/* =============================== End of Join Us =============================== */
+/* ========================================  END OF LEEN's PART OF CSS ======================================== */
+
+
+
+/* ========================================  alBAtool's PART OF CSS ======================================== */
+
+/* ======================================== EXTRA SECTION (FAQ) ======================================== */
+
+.faq-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 35px;
+  border-radius: 10px;
+  border: 1px solid #e0d5d0;
+  box-shadow: 0 3px 10px rgba(92, 32, 48, 0.08);
+}
+
+/* العنوان */
+.faq-container h1 {
+  text-align: right;
+  font-size: 32px;
+  margin-bottom: 35px;
+  color: #5c2030;
+  font-weight: 700;
+}
+
+/* كل سؤال */
+.faq-item {
+  border: 1px solid #e0d5d0;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+/* الرأس */
+.faq-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: background-color 0.3s;
+  list-style: none;
+}
+
+/* إزالة السهم الافتراضي */
+.faq-header::-webkit-details-marker {
+  display: none;
+}
+
+/* تأثير hover */
+.faq-header:hover {
+  background-color: #f8e4f4;
+}
+
+/* السؤال */
+.faq-question {
+  font-size: 18px;
+  color: #5c2030;
+  font-weight: 600;
+  flex: 1;
+  padding-left: 15px;
+}
+
+/* الأيقونة */
+.icon {
+  font-size: 24px;
+  font-weight: bold;
+  color: #c77b92;
+  transition: color 0.3s ease;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* الإجابة */
+.faq-content {
+  padding: 0 20px;
+  background-color: #faf9fa;
+  border-top: 1px solid #e0d5d0;
+  display: none;               
+}
+
+.faq-item[open] .faq-content {
+  display: block;
+  padding: 20px;
+}
+
+/* عند الفتح */
+.faq-item[open] .faq-header .icon {
+  color: #97465c;
+  transform: rotate(45deg);
+}
+
+.faq-item[open] .faq-header {
+  background-color: #f7f2f4;
+  border-bottom: 1px solid #e0d5d0;
+  color: #97465c;
+}
+/* ======================================== END OF EXTRA SECTION (FAQ) ======================================== */
+
+
+
+/*=================================================
+             صفحة خدماتنا
+=================================================*/
+
+.services-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* عنوان الصفحة */
+.services-container h1 {
+  text-align: right;
+  font-size: 32px;
+  color: #5c2030;
+  margin-bottom: 30px;
+  margin-right: 30px;
+  font-weight: 700;
+}
+
+/* قسم الفرز */
+.sorting-section {
+  margin-bottom: 30px;
+  text-align: left;
+  padding: 20px;
+  background-color: #f7f2f4;
+  border-radius: 8px;
+  border: 1px solid #e0d5d0;
+}
+
+.sorting-section label {
+  font-weight: bold;
+  margin-left: 10px;
+  color: #5c2030;
+}
+
+.sorting-section select {
+  padding: 8px 12px;
+  border: 1px solid #d8c9cc;
+  border-radius: 6px;
+  font-size: 15px;
+  background-color: #fff;
+  color: #4b2b2d;
+  transition: all 0.3s ease;
+}
+
+.sorting-section select:hover {
+  border-color: #c77b92;
+}
+
+/* الخدمات باستخدام Flexbox */
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+/* البطاقة */
+.service-item {
+  background-color: #fff;
+  border: 1px solid #e0d5d0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(92, 32, 48, 0.07);
+  transition: all 0.3s ease;
+  width: 420px;
+  padding: 20px;
+}
+
+.service-item:hover {
+  box-shadow: 0 8px 18px rgba(92, 32, 48, 0.18);
+  border-color: #c77b92;
+}
+
+/* المحتوى الداخلي */
+.service-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+/* الصورة الدائرية */
+.service-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #f8e4f4;
+  border: 2px solid #e0d5d0;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* النص */
+.service-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #5c2030;
+  margin-bottom: 8px;
+}
+
+.service-description {
+  font-size: 15px;
+  color: #4b2b2d;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* السعر */
+.service-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #97465c;
+  text-align: center;
+}
+
+.services-container .service-price::before {
+  content: "السعر: ";
+  color: #2b2b2b;
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+/* hover */
+.service-item:hover .service-name {
+  color: #c77b92;
+}
+
+
+/* ========================================  END OF ALBATOOL's PART OF CSS ======================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =============================== FOOTER =============================== */
+
+.site-footer{
+  background:#faf2f5;      
+  border-top:1px solid #e8d5de;
+  padding:24px 16px 18px;
+}
+
+.footer-wrap{
+  display:flex;
+  gap:32px;
+  align-items:center;
+  justify-content:space-between;
+  max-width:1200px;
+  margin:0 auto 10px;
+}
+
+/* يسار الصورة */
+.footer-left img{
+  width:360px;          
+  height:120px;
+  object-fit:cover;
+  border:1px solid #e0e0e0;
+  border-radius:4px;
+}
+
+/* يمين الاتصال */
+.footer-right{
+  min-width:260px;
+  text-align:right;
+}
+.footer-right h3{
+  margin:0 0 10px;
+  font-size:20px;
+  color:#2d0f18;
+}
+
+.contact{
+  list-style:none;
+  margin:0 0 12px;
+  padding:0;
+}
+.contact li{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin:6px 0;
+}
+.contact a{
+  color:#333;
+  text-decoration:none;
+}
+.contact a:hover{ text-decoration:underline; }
+
+.icon{
+  width:18px; height:18px;
+  opacity:.85;
+}
+
+/* سوشل ميديا */
+.social {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0 0;          
+  display: flex;
+  justify-content: right;   
+  gap: 20px;                
+}
+
+.social img {
+  width: 26px;
+  height: 26px;
+  transition: transform 0.2s ease;
+}
+
+.social img:hover {
+  transform: scale(1.1);
+}
+.social img{ width:22px; height:22px; }
+
+.pay-title{
+  text-align:center;
+  margin:20px 0 6px;
+  color:#b19da4;
+  font-size:14px;
+}
+
+/*  الدفع  */
+.payments{
+  list-style:none;
+  padding:0; margin:0 0 12px;
+  display:flex;
+  justify-content:center;
+  gap:18px;
+}
+.payments img{
+  width:32px; height:22px;
+  border:1px solid #e3e3e3;
+  border-radius:4px;
+  background:#fff;
+}
+
+/* سطر الحقوق  */
+.legal{
+  border-top:1px solid #ead7df;
+  padding-top:10px;
+  max-width:1200px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+  color:#777;
+  font-size:12px;
+}
+
+/*   footer layout  */
+
+.footer-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+}
+
+/* اتصل بنا */
+.footer-right{
+  order: 1;                 
+  text-align: right;
+  min-width: 280px;
+}
+
+.footer-photo{
+  order: 2;                 
+}
+
+.footer-photo img{
+  max-width: 100%;
+  object-fit: cover;
+  border: 1px solid #e3e3e3;
+  border-radius: 6px;
+   width: 100%;
+    height: 120px;
+}
+
+.pay-title {
+  text-align: center !important;   
+  display: block;
+  width: 100%;
+  margin: 20px 0 8px;
+}
+
+.payments{
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+  display: flex;
+  justify-content: center;   
+  align-items: center;
+  gap: 16px;
+}
+.payments img{
+  width: 34px;
+  height: 24px;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  background: #fff;
+}
+
+/* سطر الحقوق */
+.legal{
+  border-top: 1px solid #ead7df;
+  padding-top: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  color:#777;
+  font-size:12px;
+}
+
+/* =============================== END OF FOOTER =============================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =================================================================================================== */
+
+/* ====================================================================
+   Extra Functionality css section (favorite & select specific tailor)
+   ==================================================================== */
+
+
+/* صف أزرار الوضع (عشوائي / مخصص) */
+.service-form .tp-actions{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; align-items:flex-start}
+
+/* إخفاء أزرار الراديو الأساسية */
+.service-form .tp-mode{display:none}
+
+/* شكل زرّي الوضع */
+.service-form .tp-btn{
+  display:inline-block; padding:10px 14px; border:1px solid #ddd; border-radius:12px;
+  background:#fff; font-weight:700; font-size:14px; cursor:pointer; transition:.2s; text-align:center;
+  min-width: 160px; /* نفس العرض */
+}
+
+.service-form .tp-btn:hover{border-color:#bbb; transform:translateY(-1px)}
+.service-form .tp-btn.active{background:#97465c; color:#fff; border-color:#97465c}
+
+/* تلوين زر الوضع المختار */
+#mode-random:checked + label[for="mode-random"]{background:#97465c; color:#fff; border-color:#97465c}
+#mode-custom:checked + label[for="mode-custom"]{background:#97465c; color:#fff; border-color:#97465c}
+
+/* قائمة الخياطين مخفية إلا وقت اختيار "مخصص" */
+.service-form .tp-dropdown{display:none; border:1px solid #e0d5d0; border-radius:12px; background:#fff; box-shadow:0 4px 15px rgba(0,0,0,.06)}
+#mode-custom:checked ~ .tp-dropdown{display:block}
+
+/* رأس قائمة الخياطين + التلميح */
+.service-form .tp-dd-head{background:#faf5f7; padding:12px 14px; font-weight:700; border-bottom:1px solid #f0e3e7; color:#5c2030}
+.service-form .tp-hint{padding:10px 14px; color:#6b4b51; font-size:14px; background:#faf5f7; border-bottom:1px solid #f0e3e7}
+
+/* قائمة  */
+.service-form .tp-body{max-height:320px; overflow-y:auto; overflow-x:hidden; border-top:1px solid #f0e3e7}
+.service-form .tp-list{list-style:none; margin:0; padding:0}
+.service-form .tp-item{display:flex; align-items:center; gap:10px; padding:12px 14px; border-bottom:1px solid #f7eff2}
+.service-form .tp-item:last-child{border-bottom:0}
+
+/* الراديو حق كل خياط */
+.service-form .tp-radio{accent-color:#97465c; min-width:18px; min-height:18px; cursor:pointer}
+
+/* اسم الخياط */
+.service-form .tp-name{flex:1; font-weight:600; color:#5c2030}
+
+/* القلب (المفضلة) في قائمة الخياطين */
+.service-form .tp-fav{position:relative; width:28px; height:28px}
+.service-form .tp-fav input{position:absolute; inset:0; opacity:0; cursor:pointer}
+.service-form .tp-fav .icon{position:absolute; inset:0; display:grid; place-items:center; font-size:18px; line-height:1; color:#e11d48; transition:transform .15s}
+
+/* قلب فاضي */
+.service-form .tp-fav .icon:before{content:"♡"}
+
+/* قلب مليان */
+.service-form .tp-fav input:checked + .icon:before{content:"♥"}
+.service-form .tp-fav input:checked + .icon{transform:scale(1.05)}
+
+/* مكان إظهار اسم الخياط المختار فوق */
+.service-form .tp-picked{margin-inline-start:6px; font-weight:700; opacity:.9}
+
+/* لو الوضع مو مخصص -> لا تعرض الاسم */
+#mode-custom:not(:checked) ~ .tp-picked{display:none}
+
+/* ✅ عرض اسم الخياط المختار حسب الـ :checked */
+.tailor-picker:has(#t-azzaam:checked)  .tp-picked::before{content:" : عزام الاحمد"}
+.tailor-picker:has(#t-reemas:checked)  .tp-picked::before{content:" : ريماس السعد"}
+.tailor-picker:has(#t-khaled:checked)  .tp-picked::before{content:" : خالد الخالدي"}
+.tailor-picker:has(#t-lmyaa:checked)   .tp-picked::before{content:" : لمياء العبدالله"}
+.tailor-picker:has(#t-nouf:checked)    .tp-picked::before{content:" : نوف عبالرحمن"}
+.tailor-picker:has(#t-saad:checked)    .tp-picked::before{content:" : سعد العبدالله"}
+
+
+
+
+/* ===========================
+   heart shape button in stuff profile for extran function
+   =========================== */
+
+.tailor-fav{
+  position:relative;
+  width:26px; height:26px;
+  display:inline-block;
+  margin-inline-start:8px;
+  cursor:pointer;
+}
+
+/* إخفاء الـ checkbox */
+.tailor-fav input{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  cursor:pointer;
+}
+
+/* شكل القلب */
+.tailor-fav .icon{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  font-size:20px;
+  color:#e11d48; /* نفس لون القلوب السابقة */
+  transition:transform .15s ease;
+  line-height:1;
+}
+
+/* قلب فاضي */
+.tailor-fav .icon::before{
+  content:"♡";
+}
+
+/* لما المستخدم يفضّله */
+.tailor-fav input:checked + .icon::before{
+  content:"♥";
+}
+
+/* حركة بسيطة */
+.tailor-fav input:checked + .icon{
+  transform:scale(1.15);
+}
+
+/* فوكس لسهولة الاستخدام */
+.tailor-fav input:focus-visible + .icon{
+  outline:2px solid rgba(151,70,92,.3);
+  outline-offset:3px;
+  border-radius:6px;
+}
+/* =================================================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+/* === Unified Button System for ALL === */
+.btn{
+  display:inline-block;
+  padding:12px 30px;
+  border:none;
+  border-radius:10px;
+  text-decoration:none;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  transition:all .3s ease;
+  text-align:center;
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"]{
+  opacity:.6;
+  pointer-events:none;
+}
+
+/* أنواع */
+.btn-primary{ background:#97465c; color:#fff; border:1px solid #97465c; }
+.btn-primary:hover{ background:#7a3750; transform:translateY(-2px); }
+
+.btn-outline{ background:#fff; color:#97465c; border:1px solid #97465c; }
+.btn-outline:hover{ background:#fdeaf0; }
+
+.btn-secondary{ background:#6c757d; color:#fff; border:1px solid #6c757d; }
+.btn-secondary:hover{ background:#545b62; transform:translateY(-2px); }
+
+.btn-danger{ background:#b23b3b; color:#fff; border:1px solid #b23b3b; }
+.btn-danger:hover{ background:#8f2f2f; transform:translateY(-2px); }
+
+.btn.btn-center{
+  display: block;          
+  margin-inline: auto;     
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================================================================================
+/* ========================================= PHASE THREE =========================================
+/* ===============================================================================================
+
+/* ===== Responsive Navbar – screens less than labtops 900px===== */
+@media (max-width: 900px) {
+  .nav {
+    justify-content: space-between;
+    gap: 10px;
+    padding-right: 10px;
+  }
+
+  .logo img {
+    width: 55px;   /* fitting the  logo */
+  }
+
+  .nav-links {
+    gap: 30px;     /* make it less to fit the screen */
+    flex-wrap: wrap;   /* so it can move to the next line */
+  }
+
+  .nav-links a {
+    font-size: 15px;
+    padding: 6px 10px;
+  }
+}
+
+/* =====phones screens  ===== */
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;   /* logo is on top  of the links/buttons */
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================================================================================
+/* ========================================= LIGHT/DARK MODE =========================================
+/* ===============================================================================================
+
+
+/* =========================================
+   DARK THEME — Soft Mode For HomePage
+   ========================================= */
+
+/* BODY */
+body.dark-theme {
+  background: #212121 !important;
+  color: #e8e8e8 !important;
+}
+
+/* NAV */
+body.dark-theme header.site-header {
+  background: #2a2a2a !important;
+  border-bottom-color: #444 !important;
+}
+
+body.dark-theme .nav-links a {
+  color: #f0f0f0 !important;
+}
+
+body.dark-theme .nav-links a:hover {
+  background: #5c3d48 !important; 
+  color: #fff !important;
+}
+
+/* SLIDER */
+body.dark-theme .promo-slider {
+  background: #2b2b2b !important;
+  border-color: #444 !important;
+}
+
+body.dark-theme .overlay {
+  background: rgba(0,0,0,0.45) !important;
+}
+
+/* VISION SECTION */
+body.dark-theme .vision {
+  background: #2b2b2b !important;
+}
+
+body.dark-theme .box {
+  background: #333 !important;
+  color: #ddd !important;
+  border-color: #555 !important;
+}
+
+body.dark-theme .box h3 {
+  color: #f4c6d4 !important;
+}
+
+body.dark-theme .box p {
+  color: #eee !important;
+}
+
+/* SERVICES */
+body.dark-theme .services {
+  background: #222 !important;
+}
+
+body.dark-theme .service h3 {
+  color: #f4c6d4 !important;
+}
+
+body.dark-theme .service p {
+  color: #ddd !important;
+}
+
+body.dark-theme .service-img {
+  border-color: #555 !important;
+}
+
+/* FAQ PREVIEW */
+body.dark-theme .FAQs p,
+body.dark-theme .FAQs a {
+  color: #e8e8e8 !important;
+}
+
+/* REVIEWS */
+body.dark-theme .review {
+  background: #2f2f2f !important;
+  border-color: #555 !important;
+}
+
+body.dark-theme .review:hover {
+  background: #ffffff !important;
+  border-color: #b57a8d !important;
+}
+
+body.dark-theme .meta h3,
+body.dark-theme .review-text {
+  color: #eee !important;
+}
+
+/* FOOTER */
+body.dark-theme .site-footer {
+  background: #2a2a2a !important;
+  color: #f2f2f2 !important;
+}
+
+body.dark-theme .contact a,
+body.dark-theme .legal p,
+body.dark-theme .footer-right h3 {
+  color: #ddd !important;
+}
+
+body.dark-theme .payments img {
+  background: #333 !important;
+  border-color: #666 !important;
+}
+
+/* الهوفر يزيد شوي */
+body.dark-theme .rev-btn:hover {
+    background: #f8a6c0 !important;
+    border-color: #f8a6c0 !important;
+}
+
+
+/* =========================================
+  THEME BUTTONS (LIGHT / DARK)
+========================================= */
+
+.theme-switch {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.theme-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: #f7f2f4;
+  color: #5c2030;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+}
+
+.theme-btn:hover {
+  background: #e8d5dd;
+  transform: translateY(-2px);
+}
+
+/* دارك مود */
+body.dark-theme .theme-btn {
+  background: #333;
+  color: #ffe6ef;
+  box-shadow: 0 2px 6px rgba(255,255,255,0.15);
+}
+
+body.dark-theme .theme-btn:hover {
+  background: #444;
+}
+/* عناوين الأقسام في الدارك مود */
+body.dark-theme h2 {
+  color: #fff4f7 !important;  /* نفس لون الهدرز عندك */
+}
+
+body.dark-theme .review:hover {
+  background: #3a3a3a !important;
+  border-color: #c77b92 !important;
+}
+body.dark-theme .vision .icon {
+ filter: invert(83%) sepia(30%) saturate(800%) hue-rotate(1000deg) brightness(130%) contrast(95%); 
+}
+
+/* عناوين الخدمات في الوضع الداكن */
+body.dark-theme .services h3 {
+    color: #ffffff !important;
+}
+
+body.dark-theme .FAQs-link {
+    border-bottom-color: #b78393 !important; 
+    color: #fae0e8 !important; 
+}
+body.dark-theme #backToTop {
+    background: #a56b7a !important; 
+    color: #fff !important;
+}
+
+/* =========================================
+            ABOUT US — Dark Theme 
+========================================= */
+
+body.dark-theme .about-intro {
+  background: #2a2a2a !important;
+  color: #eee !important;
+}
+
+body.dark-theme .about-intro h2 {
+  color: #ffffff !important;
+}
+
+body.dark-theme .about-intro hr {
+  border-top-color: #555 !important;
+}
+
+/* member cards */
+body.dark-theme .member-card img {
+  border-color: #666 !important;
+}
+
+body.dark-theme .member-name {
+  color: #ffffff !important;
+}
+
+body.dark-theme .member-name:hover {
+  color: #ff9fc4 !important;
+}
+
+/* JOIN TEAM FORM */
+body.dark-theme .join-team {
+  background: #222 !important;
+}
+
+body.dark-theme .join-card {
+  background: #2f2f2f !important;
+  border-color: #555 !important;
+}
+
+body.dark-theme .join-card label {
+  color: #fbe9ee !important;
+}
+
+body.dark-theme .join-card input,
+body.dark-theme .join-card select,
+body.dark-theme .join-card textarea {
+  background: #3a3a3a !important;
+  color: #fff !important;
+  border-color: #666 !important;
+}
+
+body.dark-theme fieldset.row {
+  background: #333 !important;
+  border-color: #555 !important;
+}
+
+body.dark-theme legend {
+  color: #ffbfd7 !important;
+}
+
+/* avatar upload */
+body.dark-theme .avatar-upload {
+   background-color: transparent !important;
+  border-color: #666 !important;
+  color: #fbd0e1 !important;
+}
+
+
+/* =========================================
+ BACK TO TOP — CIRCLE
+========================================= */
+
+#backToTop.circle-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 24px;
+  border: none;
+  background: #97465c;
+  color: #fff;
+  cursor: pointer;
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  display: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: 0.25s ease;
+}
+
+#backToTop.circle-btn:hover {
+  background: #7a3750;
+  transform: translateY(-3px);
+}
+
+/* دارك مود */
+body.dark-theme #backToTop.circle-btn {
+  background: #5c2030;
+}
+
+body.dark-theme #backToTop.circle-btn:hover {
+  background: #7e4360;
+}
+
+
+
+
+/* =========================================
+ Join us  — CIRCLE
+========================================= */
+
+
+/* ===================== Custom Popup ===================== */
+.popup-success {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #97465c;
+    color: #fff;
+    padding: 16px 26px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.3s ease;
+    z-index: 9999;
+}
+
+.popup-success.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Message box */
+.form-msg-box {
+    background: #ffe8ef;
+    color: #7a1f34;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border: 1px solid #e0c2ca;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =======================================================
+   DARK MODE — CUSTOMER DASHBOARD ONLY
+  
+   ======================================================= */
+
+/* الخلفية العامة */
+.dark-theme .dashboard-page {
+    background-color: #1f1f1f !important;
+    color: #f1f1f1 !important;
+}
+
+/* عناوين صفحة لوحة التحكم */
+.dark-theme .dashboard-page h1,
+.dark-theme .dashboard-page h2,
+.dark-theme .dashboard-page h3,
+.dark-theme .dashboard-page label,
+.dark-theme .dashboard-page strong,
+.dark-theme .dashboard-page p {
+    color: #e8e8e8 !important;
+}
+
+/* الكروت (الطلبات – التقييم – طلب خدمة) */
+.dark-theme .dashboard-page .request-card,
+.dark-theme .dashboard-page .form-box,
+.dark-theme .dashboard-page .service-form {
+    background-color: #272727 !important;
+    border: 1px solid #6d3943 !important;
+    color: #f1f1f1 !important;
+}
+
+/* الفواصل */
+.dark-theme .dashboard-page hr {
+    border-color: #444 !important;
+}
+
+/* الفورمز */
+.dark-theme .dashboard-page input,
+.dark-theme .dashboard-page select,
+.dark-theme .dashboard-page textarea {
+    background-color: #303030 !important;
+    color: #f1f1f1 !important;
+    border: 1px solid #777 !important;
+}
+
+.dark-theme .dashboard-page input::placeholder,
+.dark-theme .dashboard-page textarea::placeholder {
+    color: #bdbdbd !important;
+}
+
+/* الأزرار */
+.dark-theme .dashboard-page .btn-primary {
+    background-color: #7a4050 !important;
+    border: 1px solid #9b5566 !important;
+    color: #fff !important;
+}
+
+.dark-theme .dashboard-page .btn-primary:hover {
+    background-color: #935363 !important;
+}
+
+/* حالة الطلب */
+.dark-theme .dashboard-page .status-pending {
+    color: #ffe28c !important;
+}
+.dark-theme .dashboard-page .status-completed {
+    color: #79e79b !important;
+}
+.dark-theme .dashboard-page .status-declined {
+    color: #ff8b8b !important;
+}
+
+/* النجوم */
+.dark-theme .dashboard-page .star-rating label {
+    color: #9590c5 !important;
+}
+
+/* اختيار الخياط */
+.dark-theme .dashboard-page .tp-dropdown {
+    background-color: #2d2d2d !important;
+    border-color: #6d3943 !important;
+}
+
+.dark-theme .dashboard-page .tp-item {
+    background-color: #333 !important;
+    border-color: #6d3943 !important;
+}
+
+.dark-theme .dashboard-page .tp-name {
+    color: #f1f1f1 !important;
+}
+
+/* الهيدر الصغير فوق */
+.dark-theme .dashboard-page .dashboard-header {
+    color: #e8e8e8 !important;
+}
+
+
+
+
+
+
+.dark-theme .skill-block,
+.dark-theme .edu-block {
+    background-color: #2b2b2b !important;
+    border: 1px solid #a29898 !important;
+    color: #f1f1f1 !important;
+}
+
+
+
+
+
+
+
+/* ================== DARK MODE FIX FOR STAR RATING ================== */
+
+body.dark-theme .star-rating label {
+    color: #e6cbe1 !important;   /* لون النجوم قبل الاختيار */
+}
+
+body.dark-theme .star-rating label:hover,
+body.dark-theme .star-rating label:hover ~ label {
+    color: #ffd86b !important;   /* لون النجوم عند الهوفر */
+}
+
+body.dark-theme .star-rating input:checked + label,
+body.dark-theme .star-rating input:checked + label ~ label {
+    color: #ffd86b !important;   /* لون النجوم عند الاختيار */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* أزرار   */
+.button-primary,
+.button-outline{
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  border: 1px solid #97465c;
+}
+.button-primary{
+  background: #97465c;
+  color: #fff;
+}
+.button-primary:hover{ background: #7f384d; }
+.button-outline{
+  background: #fff;
+  color: #97465c;
+}
+.button-outline:hover{ background: #fdeaf0; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =======================================================
+        ====== DARK THEME — SERVICES PAGE ====== 
+======================================================= */
+
+
+/* خلفية عامة لصفحة الخدمات */
+body.dark-theme .services-container {
+  background-color: #2b2b2b !important;
+}
+
+/* العنوان */
+body.dark-theme .services-container h1 {
+  color: #ffffff !important;
+}
+
+/* ===== صندوق الفرز ===== */
+
+body.dark-theme .sorting-section {
+  background-color: #333 !important;
+  border-color: #555 !important;
+}
+
+/* كلمة "ترتيب الخدمات:" */
+body.dark-theme .sorting-section label {
+  color: #ffffff !important;
+}
+
+/* القائمة المنسدلة */
+body.dark-theme .sorting-section select {
+  background-color: #2b2b2b !important;
+  color: #ffffff !important;
+  border-color: #666 !important;
+}
+
+/* ===== بطاقات الخدمات ===== */
+
+body.dark-theme .service-item {
+  background-color: #333 !important;
+  border-color: #555 !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5) !important;
+}
+
+/* الصور */
+body.dark-theme .service-image {
+  background-color: #444 !important;
+  border-color: #777 !important;
+}
+
+/* اسم الخدمة */
+body.dark-theme .service-name {
+  color: #ffffff !important;
+}
+
+/* وصف الخدمة */
+body.dark-theme .service-description {
+  color: #e6e6e6 !important;
+}
+
+/* السعر */
+body.dark-theme .service-price {
+  color: #ffdee9 !important; /* سعر وردي لطيف */
+}
+
+/* كلمة "السعر:" */
+body.dark-theme .service-price::before {
+  color: #ffffff !important;
+}
+
+
+
+
+
+
+
+
+
+/* ====== DARK THEME — FAQ PAGE ====== */
+
+body.dark-theme .faq-container {
+  background-color: #2b2b2b !important;
+  border-color: #555 !important;
+}
+
+body.dark-theme .faq-item {
+  background-color: #333 !important;
+  border-color: #555 !important;
+}
+
+body.dark-theme .faq-header {
+  background-color: #333 !important;
+}
+
+body.dark-theme .faq-header:hover {
+  background-color: #3a3a3a !important;
+}
+
+body.dark-theme .faq-question {
+  color: #ffffff !important;
+}
+
+body.dark-theme .faq-item[open] .faq-question {
+  color: #f4c6d4 !important; /* وردي خفيف */
+}
+
+body.dark-theme .faq-content {
+  background-color: #2b2b2b !important;
+  color: #eee !important;
+}
+
+body.dark-theme .icon {
+  color: #f4c6d4 !important;
+}
+
+body.dark-theme .faq-container h1 {
+  color: #ffffff !important;
+}
+
+body.dark-theme .faq-item[open] .faq-header {
+  background-color: #3a3a3a !important;
+  border-bottom-color: #555 !important;
+  color: #f4c6d4 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body.dark-theme .page-header-icon img {
+    filter: invert(80%) sepia(12%) saturate(250%) hue-rotate(305deg) brightness(105%) contrast(92%);
+    opacity: 1 !important;
+}
+
+body.dark-theme .page-header-title {
+    color: #ffffff !important;
+}
+
+/* ===== DARK MODE — Provider Services Cards ===== */
+
+body.dark-theme .service-card-square {
+    background: #2f2f2f !important;
+    border-color: #555 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25) !important;
+}
+
+body.dark-theme .service-card-square h3 {
+    color: #ffffff !important;
+}
+
+body.dark-theme .service-price {
+    color: #ffcedf !important; /* وردي ناعم متناسق */
+}
+
+body.dark-theme .service-card-square p {
+    color: #e0e0e0 !important;
+}
+
+/* الصورة */
+body.dark-theme .service-square-img {
+    border-color: #666 !important;
+    background-color: #3a3a3a !important;
+}
+
+/* العنوان فوق القسم */
+body.dark-theme .provider-services__title-right {
+    color: #ffffff !important;
+}
+
+/* صندوق قائمة الخدمات */
+body.dark-theme .services-scroll-box {
+    background: #262626 !important;
+    border-color: #444 !important;
+}
+
+/* ===== DARK MODE — Add Service Page ===== */
+
+body.dark-theme .form-card {
+    background: #2f2f2f !important;
+    border-color: #555 !important;
+    color: #fff !important;
+}
+
+/* عنوان "أضف خدمة جديدة" */
+body.dark-theme .form-inner-title {
+    color: #ffffff !important;
+}
+
+/* عناوين الحقول */
+body.dark-theme .form-group label {
+    color: #e8e8e8 !important;
+}
+
+/* الحقول */
+body.dark-theme .form-group input,
+body.dark-theme .form-group textarea,
+body.dark-theme .form-group select {
+    background: #3a3a3a !important;
+    border-color: #666 !important;
+    color: #fff !important;
+}
+
+body.dark-theme .form-group input::placeholder,
+body.dark-theme .form-group textarea::placeholder {
+    color: #c9c9c9 !important;
+}
+
+/* مربع رفع الصورة */
+body.dark-theme .upload-drop {
+    background-color: #333 ;
+    border-color: #777 !important;
+}
+
+body.dark-theme .upload-drop img {
+    filter: brightness(0) invert(1) !important; 
+    opacity: .9;
+}
+
+/* زر إضافة الخدمة */
+body.dark-theme .btn-primary {
+    background: #97465c !important;
+    border-color: #8d3f54 !important;
+    color: #fff !important;
+}
+
+body.dark-theme .btn-primary:hover {
+    background: #8d5c6b !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.heart-pos {
+    position: relative;
+    width: 100%;
+}
+.heart-pos .tailor-fav {
+    position: absolute;
+    top: -15px;     
+    right: 132px;   /* ← هذا اللي يحطه فوق صورة الخياط بالضبط */
+}

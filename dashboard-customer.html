@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <title>غُرزة | إضافة خدمة</title>
+  <link rel="stylesheet" href="css/style.css" >
+</head>
+<body>
+<script>
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+  } else {
+    document.body.classList.add("light-theme");
+  }
+</script>
+
+  <!--  Header -->
+  <header class="site-header">
+    <nav class="nav">
+
+      <a class="logo" href="index.html">
+        <img src="images/logo2.png" alt="شعار غرزة">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">خدماتنا</a></li>
+        <li><a href="dashboard-customer.html" class="active" >لوحة تحكم العميل </a></li>
+        <li><a href="dashboard-service-provider.html" >لوحة تحكم مقدمي الخدمات</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <!-- Main Content - W3Schools Style Layout -->
+  <main class="page-content dashboard-page">
+    
+    <!-- Dashboard Header Section -->
+    <div class="dashboard-header">
+      <div class="dashboard-icon">
+        <img src="images/customer-dashboard.WEBP" alt="أيقونة لوحة تحكم العميل">
+      </div>
+      <h1>لوحة تحكم العميل</h1>
+    </div>
+
+    <!-- Previous Requests Section -->
+    <section class="dashboard-section" id="previous-requests">
+      <h2 style="text-align: right;">الطلبات السابقة</h2>
+      
+      <!-- Request Card 1 - Pending Status -->
+      <div class="request-card">
+        <div class="request-details">
+          <p><strong>اسم الخدمة:</strong> تطريز مفرش طاولة</p>
+          <p><strong>تاريخ الخدمة:</strong> 2025/10/25</p>
+          <p><strong>التكلفة:</strong> 45 ر.س</p>
+        </div>
+        <div class="request-status">
+          <strong>حالة الطلب: <span class="status-pending">قيد الانتظار</span></strong> 
+        </div>
+      </div>
+      
+      <!-- Request Card 2 - Completed Status -->
+      <div class="request-card">
+        <div class="request-details">
+          <p><strong>اسم الخدمة:</strong> تعديل فستان</p>
+          <p><strong>تاريخ الخدمة:</strong> 2025/10/20</p>
+          <p><strong>التكلفة:</strong> 25 ر.س</p>
+        </div>
+        <div class="request-status">
+          <strong>حالة الطلب: <span class="status-completed">مكتمل</span></strong> 
+        </div>
+      </div>
+
+      <!-- Request Card 3 - Declined Status -->
+      <div class="request-card">
+        <div class="request-details">
+          <p><strong>اسم الخدمة:</strong> إصلاح سريع</p>
+          <p><strong>تاريخ الخدمة:</strong> 2025/10/18</p>
+          <p><strong>التكلفة:</strong> 25 ر.س</p>
+        </div>
+        <div class="request-status">
+          <strong>حالة الطلب: <span class="status-declined">مرفوض</span></strong> 
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="dashboard-actions">
+        <a href="request-service.html" class="btn btn-primary">طلب خدمة</a>
+        <a href="evaluate-service.html" class="btn btn-primary">تقييم خدمة</a>
+      </div>
+    </section>
+
+  </main>
+ 
+  <!-- Footer Section - W3Schools Style Structure -->
+  <footer class="site-footer" dir="rtl">
+    <div class="footer-wrap">
+
+      <!-- Footer Logo -->
+      <div class="footer-photo">
+        <a href="index.html">
+          <img src="images/logo2.png" alt="شعار غُرزة">
+        </a>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="footer-right">
+        <h3>اتصل بنا</h3>
+
+        <ul class="contact">
+          <li><p>+966504423198</p></li>
+          <li><a href="mailto:gurzah@gmail.com">gurzah@gmail.com</a></li>
+        </ul>
+
+        <!-- Social Media Links -->
+        <ul class="social">
+          <li><a href="#"><img src="images/social-media.png" alt="TikTok"></a></li>
+          <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li>
+          <li><a href="#"><img src="images/twitter.png" alt="X"></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Payment Methods -->
+    <p class="pay-title">طرق الدفع</p>
+    <ul class="payments">
+      <li><img src="images/apple-pay.jpg" alt="Apple Pay"></li>
+      <li><img src="images/visa.jpg" alt="Visa"></li>
+      <li><img src="images/paypal.jpg" alt="PayPal"></li>
+      <li><img src="images/card.jpg" alt="Credit Card"></li>
+    </ul>
+
+    <!-- Copyright Information -->
+    <div class="legal">
+      <p class="ar">2025 غُرزة للخياطة، جميع الحقوق محفوظة.</p>
+      <p class="en">2025 Gurzah Tailoring. All Rights Reserved.</p>
+    </div>
+  </footer>
+    <script src="OurScript.js"></script>
+
+</body>
+</html>

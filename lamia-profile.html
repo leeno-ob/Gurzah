@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>غُرزة | معلومات الخياطة</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script>
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+  } else {
+    document.body.classList.add("light-theme");
+  }
+</script>
+
+  <!--  Header /-->
+  <header class="site-header">
+    <nav class="nav">
+
+      <a class="logo" href="index.html">
+        <img src="images/logo2.png" alt="شعار غرزة">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" >الرئيسية</a></li>
+        <li><a href="about.html" class="active" >من نحن</a></li>
+        <li><a href="services.html">خدماتنا</a></li>
+        <li><a href="dashboard-customer.html">لوحة تحكم العميل </a></li>
+        <li><a href="dashboard-service-provider.html">لوحة تحكم مقدمي الخدمات</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <section class="tailor-intro">
+     <h2>معلومات الخياطة</h2>
+     <hr>
+    </section>
+
+  <!-- Extra Functionality  زر القلب (تفضيل الخياط) -->
+               <div class="heart-pos">
+          <label class="tailor-fav" title="تفضيل">
+             <input type="checkbox" id="fav-lamia"  data-key="lamia" aria-label="تفضيل لمياء العبدالله">
+             <span class="icon"></span>
+          </label>
+         </div>
+
+      <!-- End of Extra Functionality  زر القلب (تفضيل الخياط) -->
+        
+    <div class="table-wrap">
+      <table class="profile-table">
+        <caption>الملف التعريفي للخياطة لمياء العبدالله</caption>
+
+        <thead>
+          <tr>
+            <th>الاسم</th>
+            <th>الصورة</th>
+            <th>البريد الإلكتروني</th>
+            <th>تاريخ الميلاد</th>
+            <th>مجال الخبرة</th>
+            <th>المهارات</th>
+            <th>التعليم</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="span-cell" rowspan="3"><strong>لمياء العبدالله</strong></td>
+
+           
+            <td class="span-cell" rowspan="3">
+              <img src="images//lamia.png" alt="صورة لمياء" width="90" height="90">
+            </td>
+
+            <td class="span-cell" rowspan="3">
+              <a href="mailto:lamia@example.com">lamia@example.com</a>
+            </td>
+
+            <td class="span-cell" rowspan="3">1997/12/03</td>
+
+            <td>تفصيل العبايات وملابس العمل النسائية</td>
+
+            <td class="skills-cell" rowspan="3">
+              <ul>
+                <li><strong>مهارة رئيسية ١</strong>
+                  <ul>
+                    <li>تصميم وتفصيل العبايات الكلاسيكية والعصرية</li>
+                    <li>اختيار الأقمشة المناسبة حسب الموسم</li>
+                  </ul>
+                </li>
+                <li><strong>مهارة رئيسية ٢</strong>
+                  <ul>
+                    <li>تطريز يدوي بسيط على الأطراف</li>
+                    <li>تشطيب نهائي متقن ومتناسق</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+
+            <td class="edu-cell" rowspan="3">
+              <ul>
+                <li>2016–2020
+                  <ul>
+                    <li>بكالوريوس تصميم أزياء</li>
+                    <li>GPA: 4.41/5</li>
+                  </ul>
+                </li>
+                <li>2021–2022
+                  <ul>
+                    <li>دورة احترافية في تصميم العبايات الخليجية</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td>تصميم عبايات رسمية للمناسبات</td>
+          </tr>
+
+          <tr>
+            <td>تعديلات حسب الطلب للقياسات النسائية</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <p class="tailor-note">
+      <em>لمياء تقول:</em> أؤمن أن الأناقة تكمن في التفاصيل البسيطة واللمسات الهادئة.
+    </p>
+
+  </main>
+
+  <footer class="site-footer" dir="rtl">
+    <div class="footer-wrap">
+      <div class="footer-photo"><a href="index.html"><img src="images/logo2.png" alt="logo"></a></div>
+      <div class="footer-right">
+        <h3>اتصل بنا</h3>
+        <ul class="contact">
+          <li>📞 <p>+966504423198</p></li>
+          <li>✉️ <a href="mailto:gurzah@gmail.com">gurzah@gmail.com</a></li>
+        </ul>
+        <ul class="social">
+          <li><a href="#"><img src="images/social-media.png" alt="TikTok"></a></li>
+          <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li>
+          <li><a href="#"><img src="images/twitter.png" alt="X"></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="pay-title">طرق الدفع</p>
+    <ul class="payments">
+      <li><img src="images/apple-pay.jpg" alt="Apple Pay"></li>
+      <li><img src="images/visa.jpg" alt="Visa"></li>
+      <li><img src="images/paypal.jpg" alt="PayPal"></li>
+      <li><img src="images/card.jpg" alt="Card"></li>
+    </ul>
+
+    <div class="legal">
+      <p class="ar">© 2025 غُرزة للخياطة، جميع الحقوق محفوظة.</p>
+      <p class="en">© 2025 Gurzah Tailoring. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script src="OurScript.js"></script>
+
+</body>
+</html>

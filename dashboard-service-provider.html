@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+  <meta charset="utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <title>غُرزة | الرئيسية</title>
+  <link rel="stylesheet" href="css/style.css" >
+
+</head>
+<body >
+<script>
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+  } else {
+    document.body.classList.add("light-theme");
+  }
+</script>
+  <!--  Header /-->
+  <header class="site-header">
+    <nav class="nav">
+
+      <a class="logo" href="index.html">
+        <img src="images/logo2.png" alt="شعار غرزة">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">خدماتنا</a></li>
+        <li><a href="dashboard-customer.html">لوحة تحكم العميل </a></li>
+        <li><a href="dashboard-service-provider.html" class="active">لوحة تحكم مقدمي الخدمات</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="page-header-block" aria-label="لوحة مقدمي الخدمة">
+  <div class="page-header-icon">
+    <img src="images/geer.png" alt="إعدادات" >
+  </div>
+  <h1 class="page-header-title">لوحة مقدمي الخدمة</h1>
+</section>
+
+
+
+<section class="provider-services provider-services--tiles" >
+  <h2 class="provider-services__title-right">خدماتي</h2>
+
+  <!-- صندوق  للخدمات -->
+  <div class="services-scroll-box">
+    <div  id="providerServices" class="services-grid-square">
+      <!-- بطاقة 1 -->
+      <article class="service-card-square">
+        <img src="images/cutting.png" alt="تقصير وتطويل" class="service-square-img">
+        <h3>تقصير وتطويل</h3>
+        <p class="service-price">السعر: <span>  ٣٠ رس </span></p>
+        <p>نُجري تعديلات دقيقة على الطول لتناسب المقاس المطلوب وتحافظ على تنسيق التصميم.</p>
+      </article>
+
+      <!-- بطاقة 2 -->
+      <article class="service-card-square">
+        <img src="images/measuring.png" alt="تضييق وتوسيع" class="service-square-img">
+        <h3>تضييق وتوسيع</h3>
+        <p class="service-price">السعر: <span>  ٣٥ رس</span></p>
+        <p>نُعدّل المقاسات بعناية لضمان راحة مثالية ومظهر متناسق يعكس الأناقة.</p>
+      </article>
+
+      <!-- بطاقة 3 -->
+      <article class="service-card-square">
+        <img src="images/embroidery.png" alt="التطريز والزخرفة" class="service-square-img">
+        <h3>التطريز والزخرفة</h3>
+        <p class="service-price">السعر: <span> ٤٥ رس</span></p>
+        <p>نُضيف لمسات فنية مميّزة بتطريز وزخرفة تُبرز جمال التصميم وتمنحه طابعًا خاصًا.</p>
+      </article>
+
+      <!-- بطاقة 4 -->
+      <article class="service-card-square">
+        <img src="images/repair.png" alt="التعديل والإصلاح" class="service-square-img">
+        <h3>التعديل والإصلاح</h3>
+        <p class="service-price">السعر: <span> ٢٥ رس</span></p>
+        <p>نُرمّم القطع المتضرّرة أو البالية لتعود جديدة جاهزة للاستخدام من جديد.</p>
+      </article>
+
+      <!-- بطاقة 5 -->
+      <article class="service-card-square">
+        <img src="images/buttons.png" alt="الإضافات" class="service-square-img">
+        <h3>الإضافات</h3>
+        <p class="service-price">السعر: <span> ٢٠ رس</span></p>
+        <p>نُركّب الإضافات المطلوبة مثل الشرائط أو الأزرار أو الزينة لإضفاء لمسة فريدة على القطعة.</p>
+      </article>
+
+      <!-- بطاقة 6 -->
+      <article class="service-card-square">
+        <img src="images/donation.png" alt="التبرّع" class="service-square-img">
+        <h3>التبرّع</h3>
+        <p class="service-price">السعر: <span>مجانًا</span></p>
+        <p>نساعدك على منح ملابسك حياة جديدة عبر إعادة تدويرها أو التبرّع بها للمستفيدين.</p>
+      </article>
+    </div>
+  </div>
+
+ <div class="provider-actions-center">
+   <!-- 1-->
+<!-- بعد -->
+<a href="add-service.html" class="btn btn-primary">إضافة خدمة</a>
+<a href="manage-members.html" class="btn btn-primary">إدارة الأعضاء</a>
+
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+   <footer class="site-footer" dir="rtl">
+  <div class="footer-wrap">
+
+    <div class="footer-photo">
+      <a href="index.html">
+      <img src="images/logo2.png" alt="logo" >
+      </a>
+    </div>
+
+    <div class="footer-right">
+      <h3>اتصل بنا</h3>
+
+      <ul class="contact">
+        <li> 📞 <p>+966504423198</p>
+        </li>
+        <li> ✉️ <a href="mailto:gurzah@gmail.com">gurzah@gmail.com</a>
+        </li>
+      </ul>
+
+      <ul class="social">
+        <li><a href="#" >
+          <img src="images/social-media.png" alt="TikTok"></a></li>
+        <li><a href="#">
+          <img src="images/instagram.png" alt="Instagram"></a></li>
+        <li><a href="#">
+          <img src="images/twitter.png" alt="X"></a></li>
+      </ul>
+    </div>
+  </div>
+
+
+  <p class="pay-title">طرق الدفع</p>
+
+  <!-- أيقونات الدفع في الوسط -->
+  <ul class="payments">
+    <li><img src="images/apple-pay.jpg" alt="طريقة دفع 1"></li>
+    <li><img src="images/visa.jpg" alt="طريقة دفع 2"></li>
+    <li><img src="images/paypal.jpg" alt="طريقة دفع 3"></li>
+    <li><img src="images/card.jpg" alt="طريقة دفع 4"></li>
+  </ul>
+
+  <!-- سطر الحقوق -->
+  <div class="legal">
+    <p class="ar">© 2025 غُرزة للخياطة، جميع الحقوق محفوظة.</p>
+    <p class="en">© 2025 Gurzah Tailoring. All Rights Reserved.</p>
+  </div>
+</footer>
+  <script src="OurScript.js"></script>
+
+</body>
+</html>

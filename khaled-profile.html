@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>غُرزة | معلومات الخياط</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+<script>
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+  } else {
+    document.body.classList.add("light-theme");
+  }
+</script>
+  <!--  Header /-->
+  <header class="site-header">
+    <nav class="nav">
+
+      <a class="logo" href="index.html">
+        <img src="images/logo2.png" alt="شعار غرزة">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" >الرئيسية</a></li>
+        <li><a href="about.html" class="active">من نحن</a></li>
+        <li><a href="services.html">خدماتنا</a></li>
+        <li><a href="dashboard-customer.html">لوحة تحكم العميل </a></li>
+        <li><a href="dashboard-service-provider.html">لوحة تحكم مقدمي الخدمات</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <section class="tailor-intro">
+     <h2>معلومات الخياط</h2>
+     <hr>
+    </section>
+
+     <!-- Extra Functionality  زر القلب (تفضيل الخياط) -->
+              <div class="heart-pos">
+          <label class="tailor-fav" title="تفضيل">
+             <input type="checkbox" id="fav-khaled"  data-key="khaled" aria-label="تفضيل خالد الخالدي">
+             <span class="icon"></span>
+          </label>
+        </div>
+      <!-- End of Extra Functionality  زر القلب (تفضيل الخياط) --> 
+       
+    <div class="table-wrap">
+      <table class="profile-table">
+        <caption>الملف التعريفي للخياط خالد الخالدي</caption>
+
+        <thead>
+          <tr>
+            <th>الاسم</th>
+            <th>الصورة</th>
+            <th>البريد الإلكتروني</th>
+            <th>تاريخ الميلاد</th>
+            <th>مجال الخبرة</th>
+            <th>المهارات</th>
+            <th>التعليم</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="span-cell" rowspan="3"><strong>خالد الخالدي</strong></td>
+
+            
+
+            <td class="span-cell" rowspan="3">
+              <img src="images/khaled.png" alt="صورة خالد" width="90" height="90">
+            </td>
+
+            <td class="span-cell" rowspan="3">
+              <a href="mailto:khaled@example.com">khaled@example.com</a>
+            </td>
+
+            <td class="span-cell" rowspan="3">1995/05/09</td>
+
+            <td>تفصيل الثياب الرجالية التقليدية</td>
+
+            <td class="skills-cell" rowspan="3">
+              <ul>
+                <li><strong>مهارة رئيسية ١</strong>
+                  <ul>
+                    <li>قص الأقمشة الثقيلة (صوف، بشت)</li>
+                    <li>خياطة الياقات والأكمام باحتراف</li>
+                  </ul>
+                </li>
+                <li><strong>مهارة رئيسية ٢</strong>
+                  <ul>
+                    <li>تطريز يدوي للثياب الرسمية</li>
+                    <li>تشطيب نهائي دقيق وخياطة متقنة</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+
+            <td class="edu-cell" rowspan="3">
+              <ul>
+                <li>2014–2018
+                  <ul>
+                    <li>دبلوم خياطة رجالية</li>
+                    <li>GPA: 4.10/5</li>
+                  </ul>
+                </li>
+                <li>2020–2021
+                  <ul>
+                    <li>دورة خياطة البشوت والملابس التراثية</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+          </tr>
+
+          <tr>
+            <td>تعديلات مقاسات وملابس المناسبات الرسمية</td>
+          </tr>
+
+          <tr>
+            <td>تصميم نماذج خاصة حسب طلب العميل</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <p class="tailor-note">
+      <em>خالد يقول:</em> أؤمن أن الأناقة تبدأ من القصّة المتقنة، وكل غرزة تروي ذوق العميل.
+    </p>
+
+  </main>
+
+  <footer class="site-footer" dir="rtl">
+    <div class="footer-wrap">
+      <div class="footer-photo"><a href="index.html"><img src="images/logo2.png" alt="logo"></a></div>
+      <div class="footer-right">
+        <h3>اتصل بنا</h3>
+        <ul class="contact">
+          <li>📞 <p>+966504423198</p></li>
+          <li>✉️ <a href="mailto:gurzah@gmail.com">gurzah@gmail.com</a></li>
+        </ul>
+        <ul class="social">
+          <li><a href="#"><img src="images/social-media.png" alt="TikTok"></a></li>
+          <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li>
+          <li><a href="#"><img src="images/twitter.png" alt="X"></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="pay-title">طرق الدفع</p>
+    <ul class="payments">
+      <li><img src="images/apple-pay.jpg" alt="Apple Pay"></li>
+      <li><img src="images/visa.jpg" alt="Visa"></li>
+      <li><img src="images/paypal.jpg" alt="PayPal"></li>
+      <li><img src="images/card.jpg" alt="Card"></li>
+    </ul>
+
+    <div class="legal">
+      <p class="ar">© 2025 غُرزة للخياطة، جميع الحقوق محفوظة.</p>
+      <p class="en">© 2025 Gurzah Tailoring. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script src="OurScript.js"></script>
+
+</body>
+</html>
