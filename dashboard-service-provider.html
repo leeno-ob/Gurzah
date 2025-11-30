@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>غُرزة | لوحة مقدمي الخدمة</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <meta charset="utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <title>غُرزة | الرئيسية</title>
+  <link rel="stylesheet" href="css/style.css" >
+
 </head>
-<body>
-
-
-
-
-
-  <!-- الهيدر -->
-  <header class="site-header" aria-label="رأس الصفحة">
+<body >
+<script>
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-theme");
+  } else {
+    document.body.classList.add("light-theme");
+  }
+</script>
+  <!--  Header /-->
+  <header class="site-header">
     <nav class="nav">
+
       <a class="logo" href="index.html">
-        <img src="images/logo2.png" alt="شعارنا">
+        <img src="images/logo2.png" alt="شعار غرزة">
       </a>
 
       <ul class="nav-links">
         <li><a href="index.html">الرئيسية</a></li>
-        <li><a href="services.html">من نحن</a></li>
-        <li><a href="about.html">خدماتنا</a></li>
-        <li><a href="dashboard-tailor.html">لوحة تحكم العميل</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="services.html">خدماتنا</a></li>
+        <li><a href="dashboard-customer.html">لوحة تحكم العميل </a></li>
         <li><a href="dashboard-service-provider.html" class="active">لوحة تحكم مقدمي الخدمات</a></li>
-
       </ul>
     </nav>
   </header>
@@ -34,101 +39,143 @@
 
 
 
-  <section class="page-header-block" aria-label="لوحة مقدمي الخدمة">
-    <div class="page-header-icon">
-      <img src="images/geer.png" alt="إعدادات">
+
+
+
+
+
+
+
+
+
+
+
+<section class="page-header-block" aria-label="لوحة مقدمي الخدمة">
+  <div class="page-header-icon">
+    <img src="images/geer.png" alt="إعدادات" >
+  </div>
+  <h1 class="page-header-title">لوحة مقدمي الخدمة</h1>
+</section>
+
+
+
+<section class="provider-services provider-services--tiles" >
+  <h2 class="provider-services__title-right">خدماتي</h2>
+  
+ <div class="provider-actions-center">
+   <!-- 1-->
+<!-- بعد -->
+<a href="add-service.html" class="btn btn-primary">إضافة خدمة</a>
+<a href="manage-members.html" class="btn btn-primary">إدارة الأعضاء</a>
+
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+   <footer class="site-footer" dir="rtl">
+  <div class="footer-wrap">
+
+    <div class="footer-photo">
+      <a href="index.html">
+      <img src="images/logo2.png" alt="logo" >
+      </a>
     </div>
-    <h1 class="page-header-title">لوحة مقدمي الخدمة</h1>
-  </section>
 
+    <div class="footer-right">
+      <h3>اتصل بنا</h3>
 
+      <ul class="contact">
+        <li> 📞 <p>+966504423198</p>
+        </li>
+        <li> ✉️ <a href="mailto:gurzah@gmail.com">gurzah@gmail.com</a>
+        </li>
+      </ul>
 
-  <!-- خدمات مقدم الخدمة -->
-  <section class="provider-services provider-services--tiles">
-    <h2 class="provider-services__title-right">خدماتي</h2>
-
-    <div class="services-scroll-box">
-      <div class="services-grid-square" id="providerServices">
-      </div>
+      <ul class="social">
+        <li><a href="#" >
+          <img src="images/social-media.png" alt="TikTok"></a></li>
+        <li><a href="#">
+          <img src="images/instagram.png" alt="Instagram"></a></li>
+        <li><a href="#">
+          <img src="images/twitter.png" alt="X"></a></li>
+      </ul>
     </div>
-
-    <div class="provider-actions-center">
-      <a href="add-service.html" class="button-primary">إضافة خدمة</a>
-      <a href="manage-members.html" class="button-outline">إدارة الأعضاء</a>
-    </div>
-  </section>
+  </div>
 
 
+  <p class="pay-title">طرق الدفع</p>
 
+  <!-- أيقونات الدفع في الوسط -->
+  <ul class="payments">
+    <li><img src="images/apple-pay.jpg" alt="طريقة دفع 1"></li>
+    <li><img src="images/visa.jpg" alt="طريقة دفع 2"></li>
+    <li><img src="images/paypal.jpg" alt="طريقة دفع 3"></li>
+    <li><img src="images/card.jpg" alt="طريقة دفع 4"></li>
+  </ul>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- الفوتر -->
-  <footer class="site-footer" dir="rtl">
-    <div class="footer-wrap">
-      <div class="footer-photo">
-        <a href="index.html">
-          <img src="images/logo2.png" alt="logo">
-        </a>
-      </div>
-
-      <div class="footer-right">
-        <h3>اتصل بنا</h3>
-
-        <ul class="contact">
-<li>📞 <a href="tel:+966504423198">+966504423198</a></li>
-          <li>✉️ <a href="mailto:gurzah@gmail.com">gurzah@gmail.com</a></li>
-        </ul>
-
-        <ul class="social">
-          <li>
-            <a href="#">
-              <img src="images/social-media.png" alt="TikTok">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="images/instagram.png" alt="Instagram">
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="images/twitter.png" alt="X">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <p class="pay-title">طرق الدفع</p>
-
-    <ul class="payments">
-      <li><img src="images/apple-pay.jpg" alt="طريقة دفع 1"></li>
-      <li><img src="images/visa.jpg" alt="طريقة دفع 2"></li>
-      <li><img src="images/paypal.jpg" alt="طريقة دفع 3"></li>
-      <li><img src="images/card.jpg" alt="طريقة دفع 4"></li>
-    </ul>
-
-    <div class="legal">
-      <p class="ar">© 2025 غُرزة للخياطة، جميع الحقوق محفوظة.</p>
-      <p class="en">© 2025 Gurzah Tailoring. All Rights Reserved.</p>
-    </div>
-  </footer>
-
+  <!-- سطر الحقوق -->
+  <div class="legal">
+    <p class="ar">© 2025 غُرزة للخياطة، جميع الحقوق محفوظة.</p>
+    <p class="en">© 2025 Gurzah Tailoring. All Rights Reserved.</p>
+  </div>
+</footer>
   <script src="OurScript.js"></script>
+
 </body>
 </html>
-
-
-
